@@ -1,5 +1,8 @@
 # DealScout 🔎💼
 
+### 🌐 Live app: **https://dealscout-r8xm.onrender.com**
+*(Free hosting: the first visit may take ~30 seconds to wake up. You can also run it on your own computer in about 5 minutes — see [Run it](#run-it-about-5-minutes).)*
+
 **Find the M&A deals worth talking about in your industry — checked, ranked, and interview-ready.**
 
 DealScout is an AI agent team for students recruiting for investment banking and for junior bankers.
@@ -13,9 +16,6 @@ throw out deals with made-up links or numbers that don't match their own source.
 
 > **Model:** `gpt-6-luna` through the course Portkey key (no other model is used).
 > **Typical cost:** about $0.05–$0.10 per search, ≈ $0.001 per pitch; repeat searches are free for 24 h.
-
-> **🌐 Try it online: https://dealscout-r8xm.onrender.com** (free hosting: the first visit may take ~30 s to wake up).
-> **Or run it on your own computer** in about 5 minutes (below) — this is the fully supported path.
 
 ---
 
