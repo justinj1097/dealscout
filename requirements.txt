@@ -1,0 +1,6 @@
+# DealScout – tested with Python 3.11-3.13
+dash==4.4.1
+openai==3.7.0
+pydantic==2.13.5
+requests==2.34.2
+pytest==9.1.1

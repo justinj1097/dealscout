@@ -1,0 +1,510 @@
+{
+ "run_id": "20261024-121231-e4bf",
+ "criteria": {
+  "industry": "Healthcare & Biotech",
+  "focus": "",
+  "min_value_usd_m": 1000.0,
+  "months_back": 12,
+  "region": "Global",
+  "deal_types": [
+   "M&A"
+  ],
+  "priority": "Best for interviews",
+  "num_deals": 5,
+  "note": ""
+ },
+ "deals": [
+  {
+   "acquirer": "Vertex Pharmaceuticals",
+   "target": "Crinetics Pharmaceuticals",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-07-06",
+   "status": "Closed",
+   "value_usd_m": 10000.0,
+   "value_quote": "Vertex would acquire Crinetics for a total equity value of approximately $10.0 billion, or approximately $8.8 billion net of estimated cash acquired, subject to certain closing conditions.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [
+    "Morgan Stanley & Co. LLC",
+    "Lazard"
+   ],
+   "seller_advisors": [
+    "J.P. Morgan Securities LLC",
+    "Leerink Partners LLC"
+   ],
+   "strategic_rationale": "The acquisition adds Crinetics\u2019 commercialized and late-stage endocrinology assets, including a marketed acromegaly treatment, to Vertex\u2019s portfolio. Vertex said the deal would accelerate revenue growth and enhance its long-term earnings profile.",
+   "source_url": "https://news.vrtx.com/news-releases/news-release-details/vertex-acquire-crinetics-pharmaceuticals",
+   "source_title": "Vertex to Acquire Crinetics Pharmaceuticals",
+   "page_check": "site blocked bots",
+   "page_check_note": "HTTP 403",
+   "verdict": "confirmed",
+   "check_note": "Independent coverage confirms the acquisition and names advisors for both parties; the reported value matches $10 billion.",
+   "second_source": "https://www.biospace.com/press-releases/vertex-to-acquire-crinetics-pharmaceuticals",
+   "advisors_source": "https://www.biospace.com/press-releases/vertex-to-acquire-crinetics-pharmaceuticals",
+   "score": 75.3,
+   "score_parts": {
+    "size": 0.85,
+    "recency": 0.7,
+    "banks": 1.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Vertex\u2019s acquisition of Crinetics adds a marketed acromegaly treatment and late-stage endocrinology assets, broadening its portfolio while supporting its stated growth and earnings objectives.",
+   "interview_angle": "Use this as a deal example of a large pharmaceutical company adding commercial and late-stage assets to diversify and strengthen its growth profile.",
+   "pitch": {
+    "pitch": {
+     "headline": "Vertex acquires Crinetics for $10 billion to expand its endocrinology portfolio",
+     "sixty_second_pitch": "A deal I\u2019ve been following is Vertex Pharmaceuticals\u2019 $10 billion acquisition of Crinetics Pharmaceuticals, announced July 6, 2026, and reported as closed. Strategically, it adds Crinetics\u2019 commercialized and late-stage endocrinology assets, including a marketed acromegaly treatment. Vertex said the acquisition would accelerate revenue growth and strengthen its long-term earnings profile, while broadening its portfolio. The disclosed deal facts don\u2019t include an EV/revenue or EV/EBITDA multiple, so I wouldn\u2019t characterize the price on a trading-multiple basis. As a rough size reference, DealScout\u2019s healthcare and biotech comparables show a median transaction value of $8.85 billion; this deal is above that, though deal size alone doesn\u2019t establish whether it\u2019s expensive. A key risk is whether Vertex can successfully integrate the assets and deliver the expected growth and earnings contribution. My view is that the strategic rationale is clear, but assessing value ultimately requires asset-level forecasts and a better understanding of the transaction economics.",
+     "key_numbers": [
+      {
+       "label": "Deal value",
+       "value": "$10.0 billion"
+      },
+      {
+       "label": "Announced",
+       "value": "July 6, 2026"
+      },
+      {
+       "label": "Status",
+       "value": "Closed"
+      },
+      {
+       "label": "EV/EBITDA and EV/revenue",
+       "value": "Not disclosed in the provided facts"
+      },
+      {
+       "label": "Healthcare & biotech comparable median deal value",
+       "value": "$8.85 billion"
+      },
+      {
+       "label": "Advisors",
+       "value": "Vertex: Morgan Stanley and Lazard; Crinetics: J.P. Morgan and Leerink Partners"
+      }
+     ],
+     "why_it_makes_sense": [
+      "Adds a marketed acromegaly treatment and late-stage endocrinology assets to Vertex\u2019s portfolio.",
+      "Supports Vertex\u2019s stated objectives of accelerating revenue growth and enhancing its long-term earnings profile.",
+      "Broadens Vertex\u2019s portfolio with commercialized and late-stage assets."
+     ],
+     "risks": [
+      "Integration and execution risk could affect the expected contribution from the acquired assets.",
+      "The $10 billion price is above the comparable median by deal value, but missing valuation multiples and asset-level forecasts limit conclusions about affordability.",
+      "The provided facts do not quantify the assets\u2019 commercial outlook or expected earnings contribution, making it difficult to assess the deal\u2019s financial returns."
+     ],
+     "interview_questions": [
+      {
+       "question": "Why did Vertex acquire Crinetics?",
+       "answer": "The deal adds a marketed acromegaly treatment and late-stage endocrinology assets, broadening Vertex\u2019s portfolio. Vertex said it expects the acquisition to accelerate revenue growth and enhance its long-term earnings profile."
+      },
+      {
+       "question": "How would you assess the $10 billion purchase price?",
+       "answer": "The provided facts don\u2019t disclose EV/revenue or EV/EBITDA, so I can\u2019t assess the price on those multiples. The deal is above DealScout\u2019s $8.85 billion median comparable deal value, but size alone isn\u2019t enough to judge valuation; I\u2019d want asset-level forecasts and transaction economics."
+      },
+      {
+       "question": "What is a key risk to the deal thesis?",
+       "answer": "Execution risk: Vertex needs to integrate the acquired assets and realize the expected growth and earnings contribution. The provided facts don\u2019t quantify that contribution, so I\u2019d focus on evidence of commercial performance and development progress."
+      }
+     ]
+    },
+    "steps": [
+     "model call 1: 952 in (0 cached) / 31 out, 0 searches, $0.0001",
+     "\ud83d\udcda deal library: 4 comparable deals",
+     "model call 2: 1,245 in (0 cached) / 901 out, 0 searches, $0.0006"
+    ],
+    "cached": false,
+    "error": null,
+    "usage": {
+     "totals": {
+      "agent": "TOTAL",
+      "input_tokens": 2197,
+      "cached_tokens": 0,
+      "cache_write_tokens": 1242,
+      "output_tokens": 932,
+      "reasoning_tokens": 104,
+      "web_searches": 0,
+      "seconds": 7.3,
+      "cost": 0.0007167499999999999
+     },
+     "by_agent": [
+      {
+       "agent": "Pitch Coach",
+       "input_tokens": 2197,
+       "cached_tokens": 0,
+       "cache_write_tokens": 1242,
+       "output_tokens": 932,
+       "reasoning_tokens": 104,
+       "web_searches": 0,
+       "seconds": 7.3,
+       "cost": 0.0007167499999999999
+      }
+     ]
+    },
+    "safety": []
+   }
+  },
+  {
+   "acquirer": "Merck KGaA, Darmstadt, Germany",
+   "target": "Bio-Techne Corporation",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-06-25",
+   "status": "Pending",
+   "value_usd_m": 11300.0,
+   "value_quote": "Purchase price of US$73 per share in cash represents an enterprise value of US$11.3 billion (EUR 9.9 billion).",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [
+    "Guggenheim Securities",
+    "J.P. Morgan"
+   ],
+   "seller_advisors": [
+    "Goldman Sachs & Co. LLC"
+   ],
+   "strategic_rationale": "The acquisition would expand Merck\u2019s life-sciences business and strengthen its position across research, bioprocessing and advanced therapeutics. The companies also cited broader offerings and expanded customer access as benefits of combining their platforms.",
+   "source_url": "https://investors.bio-techne.com/press-releases/detail/535/merck-kgaa-darmstadt-germany-agrees-to-acquire",
+   "source_title": "Merck KGaA, Darmstadt, Germany, Agrees to Acquire Bio-Techne, Strengthening Leadership Position in Fast-Growing Life Sci",
+   "page_check": "matched",
+   "page_check_note": "found 73, 11.3, 9.9 on the page",
+   "verdict": "confirmed",
+   "check_note": "Merck\u2019s announcement confirms the June 25 agreement and $11.3 billion enterprise value, and names the financial advisors.",
+   "second_source": "https://www.merckgroup.com/en/news/merck-agrees-to-acquire-bio-techne-25-06-2026.html",
+   "advisors_source": "https://www.merckgroup.com/en/news/merck-agrees-to-acquire-bio-techne-25-06-2026.html",
+   "score": 74.9,
+   "score_parts": {
+    "size": 0.86,
+    "recency": 0.67,
+    "banks": 1.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "The pending Bio-Techne acquisition would broaden Merck\u2019s life-sciences platform across research, bioprocessing and advanced therapeutics, with customer access a central part of the rationale.",
+   "interview_angle": "Discuss how combining complementary life-sciences offerings could expand a platform\u2019s reach, while noting that the transaction remains pending.",
+   "pitch": {
+    "pitch": {
+     "headline": "Merck KGaA agrees to acquire Bio-Techne for $11.3B to expand its life-sciences platform",
+     "sixty_second_pitch": "A deal I\u2019ve been following is Merck KGaA\u2019s pending agreement to acquire Bio-Techne for an enterprise value of $11.3 billion, announced on June 25, 2026. The strategic rationale is to expand Merck\u2019s life-sciences business and strengthen its position across research, bioprocessing, and advanced therapeutics. The companies also point to broader offerings and greater customer access from combining their platforms. The deal\u2019s EV/EBITDA and EV/revenue multiples weren\u2019t disclosed, so I wouldn\u2019t characterize the price on a valuation basis without more financial information. For context, the median transaction value among the verified healthcare and biotech comparables provided is $8.85 billion, though those deals may differ in business mix and scale. One key risk is execution: Merck will need to integrate the businesses and realize the expected platform and customer-access benefits. My view is that the strategic fit is clear, but the valuation case and ultimate outcome depend on the undisclosed financials and successful integration.",
+     "key_numbers": [
+      {
+       "label": "Enterprise value",
+       "value": "$11.3B"
+      },
+      {
+       "label": "Announced",
+       "value": "June 25, 2026"
+      },
+      {
+       "label": "Status",
+       "value": "Pending"
+      },
+      {
+       "label": "EV/EBITDA and EV/revenue",
+       "value": "Not disclosed"
+      },
+      {
+       "label": "Verified comparable median deal value",
+       "value": "$8.85B"
+      },
+      {
+       "label": "Financial advisors",
+       "value": "Buyer: Guggenheim Securities and J.P. Morgan; seller: Goldman Sachs & Co. LLC"
+      }
+     ],
+     "why_it_makes_sense": [
+      "Expands Merck\u2019s life-sciences business across research, bioprocessing, and advanced therapeutics.",
+      "Could provide broader offerings and expanded customer access through the combined platforms."
+     ],
+     "risks": [
+      "Integration may make it difficult to realize the anticipated platform and customer-access benefits.",
+      "The valuation is difficult to assess because financial multiples were not disclosed.",
+      "The transaction remains pending, so completion is not yet certain."
+     ],
+     "interview_questions": [
+      {
+       "question": "What is the strategic rationale for the acquisition?",
+       "answer": "Merck says it would expand its life-sciences business across research, bioprocessing, and advanced therapeutics, while broadening offerings and customer access."
+      },
+      {
+       "question": "How would you assess the purchase price?",
+       "answer": "The stated enterprise value is $11.3 billion, but EV/EBITDA and EV/revenue were not disclosed. I\u2019d need financials and a relevant peer set to assess valuation; the provided comparables have a median deal value of $8.85 billion, but deal size alone is not a valuation multiple."
+      },
+      {
+       "question": "What is the main execution risk?",
+       "answer": "Integration: Merck needs to combine the platforms effectively and translate the strategic rationale into broader offerings and expanded customer access."
+      }
+     ]
+    },
+    "steps": [
+     "model call 1: 959 in (0 cached) / 31 out, 0 searches, $0.0001",
+     "\ud83d\udcda deal library: 4 comparable deals",
+     "model call 2: 1,244 in (0 cached) / 800 out, 0 searches, $0.0006"
+    ],
+    "cached": false,
+    "error": null,
+    "usage": {
+     "totals": {
+      "agent": "TOTAL",
+      "input_tokens": 2203,
+      "cached_tokens": 0,
+      "cache_write_tokens": 1241,
+      "output_tokens": 831,
+      "reasoning_tokens": 82,
+      "web_searches": 0,
+      "seconds": 7.4,
+      "cost": 0.0006668249999999999
+     },
+     "by_agent": [
+      {
+       "agent": "Pitch Coach",
+       "input_tokens": 2203,
+       "cached_tokens": 0,
+       "cache_write_tokens": 1241,
+       "output_tokens": 831,
+       "reasoning_tokens": 82,
+       "web_searches": 0,
+       "seconds": 7.4,
+       "cost": 0.0006668249999999999
+      }
+     ]
+    },
+    "safety": []
+   }
+  },
+  {
+   "acquirer": "Danaher Corporation",
+   "target": "Masimo Corporation",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-02-17",
+   "status": "Pending",
+   "value_usd_m": 9900.0,
+   "value_quote": "Danaher will acquire Masimo for $180.00 per share in cash, representing a total consideration of $9.9 billion.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [
+    "Citi",
+    "Goldman Sachs"
+   ],
+   "seller_advisors": [
+    "Centerview Partners LLC",
+    "Morgan Stanley & Co. LLC"
+   ],
+   "strategic_rationale": "The deal adds Masimo\u2019s patient-monitoring and pulse-oximetry business to Danaher\u2019s diagnostics portfolio. Danaher described Masimo as a specialty diagnostics provider focused primarily on acute-care settings.",
+   "source_url": "https://www.masimo.com/media/masimo-to-be-acquired-by-danaher",
+   "source_title": "Masimo to Be Acquired by Danaher for $180.00 per Share",
+   "page_check": "site blocked bots",
+   "page_check_note": "HTTP 403",
+   "verdict": "confirmed",
+   "check_note": "Independent coverage confirms the February 17 agreement and $9.9 billion value, and names advisors for both parties.",
+   "second_source": "https://www.hmenews.com/article/danaher-to-acquire-masimo-for-9-9b",
+   "advisors_source": "https://www.hmenews.com/article/danaher-to-acquire-masimo-for-9-9b",
+   "score": 67.6,
+   "score_parts": {
+    "size": 0.85,
+    "recency": 0.32,
+    "banks": 1.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Danaher\u2019s pending acquisition of Masimo would add patient monitoring and pulse oximetry to its diagnostics portfolio, extending its exposure to acute-care settings.",
+   "interview_angle": "Use this to explain a portfolio-adjacency rationale: adding a specialty diagnostics business that complements the buyer\u2019s existing portfolio."
+  },
+  {
+   "acquirer": "Merck KGaA, Darmstadt, Germany",
+   "target": "Silence Therapeutics plc",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-10-19",
+   "status": "Pending",
+   "value_usd_m": 1100.0,
+   "value_quote": "Purchase price of $20 per ADS in cash represents an enterprise value of $1.1 billion and an equity value of approximately $1.3 billion.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [],
+   "seller_advisors": [],
+   "strategic_rationale": "Merck said the acquisition would strengthen its position in rare diseases and support its ambition to become a global specialty innovator. Silence brings a clinical-stage siRNA platform and a Phase 3-ready investigational therapy for polycythemia vera.",
+   "source_url": "https://www.merckgroup.com/en/news/silence-therapeutics-19-10-2026.html",
+   "source_title": "Acquisition of Silence Therapeutics to Strengthen Rare Disease Portfolio",
+   "page_check": "site blocked bots",
+   "page_check_note": "HTTP 403",
+   "verdict": "confirmed",
+   "check_note": "Independent coverage confirms Merck\u2019s October 19 agreement to acquire Silence Therapeutics for $1.1 billion; no financial advisors were identified in this source.",
+   "second_source": "https://www.biospace.com/business/merck-kgaa-makes-noise-in-hematology-with-1-1b-silence-buy",
+   "score": 60.9,
+   "score_parts": {
+    "size": 0.65,
+    "recency": 0.99,
+    "banks": 0.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Merck\u2019s proposed acquisition of Silence Therapeutics would add a clinical-stage siRNA platform and a Phase 3-ready therapy, supporting its stated focus on rare diseases and specialty innovation.",
+   "interview_angle": "Frame this as a pipeline-and-platform deal, and distinguish the strategic potential from the execution and development risks of a pending transaction."
+  },
+  {
+   "acquirer": "Gilead Sciences",
+   "target": "Arcellx",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-02-23",
+   "status": "Closed",
+   "value_usd_m": 7800.0,
+   "value_quote": "Gilead acquired Arcellx for $115 per share in cash, plus one non-transferable contingent value right (CVR) of $5 per share, representing a total implied equity value of approximately $7.8 billion at the time of closing.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [],
+   "seller_advisors": [],
+   "strategic_rationale": "Gilead acquired Arcellx to take full ownership of its cell-therapy business and strengthen its cancer-treatment pipeline. Arcellx\u2019s immunotherapy programs target cancer and other serious diseases.",
+   "source_url": "https://www.gilead.com/news/news-details/2026/gilead-sciences-completes-acquisition-of-arcellx-ahead-of-potential-commercial-launch-of-anito-cel",
+   "source_title": "Gilead Sciences Completes Acquisition of Arcellx Ahead of Potential Commercial Launch of Anito-cel",
+   "page_check": "matched",
+   "page_check_note": "found 115, 7.8 on the page",
+   "verdict": "confirmed",
+   "check_note": "Wilson Sonsini confirms Gilead\u2019s February 23 agreement to acquire Arcellx for an implied $7.8 billion; no financial advisors were identified in this source.",
+   "second_source": "https://www.wsgr.com/en/insights/firm-advises-arcellx-on-dollar78-billion-acquisition-by-gilead.html",
+   "score": 52.4,
+   "score_parts": {
+    "size": 0.83,
+    "recency": 0.33,
+    "banks": 0.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Gilead\u2019s acquisition of Arcellx gives it full ownership of a cell-therapy business and strengthens its cancer-treatment pipeline.",
+   "interview_angle": "Use this as an example of a buyer deepening control of a strategically relevant therapy area through full ownership of a target\u2019s business."
+  }
+ ],
+ "rejected": [],
+ "trace": [
+  {
+   "agent": "Input guard (code)",
+   "steps": [
+    "criteria: Healthcare & Biotech | \u2265 $1,000M | last 12 months | Global | Best for interviews",
+    "free-text note: none"
+   ]
+  },
+  {
+   "agent": "Scout",
+   "steps": [
+    "\ud83d\udd0e web search: \u201chealthcare biotech acquisition 2026 announced $ billion deal\u201d",
+    "\ud83d\udd0e web search: \u201cpharma acquisition 2025 $ billion announced M&A\u201d",
+    "\ud83d\udd0e web search: \u201cbiotech acquisition 2026 $1 billion deal announced\u201d",
+    "\ud83d\udd0e web search: \u201chealthcare merger acquisition 2025 $ billion deal\u201d",
+    "\ud83d\udd0e web search: \u201chealthcare biotech acquisition announced 2026 $ billion\u201d",
+    "\ud83d\udd0e web search: \u201cpharma acquisition 2025 billion deal M&A\u201d",
+    "\ud83d\udd0e web search: \u201cbiotech acquisition 2026 billion announced\u201d",
+    "\ud83d\udd0e web search: \u201chealthcare merger acquisition 2025 billion\u201d",
+    "\ud83d\udd0e web search: \u201csite:investor.lilly.com 2026 acquire biotech $ billion acquisition\u201d",
+    "\ud83d\udd0e web search: \u201csite:sec.gov 2026 acquisition biotech $ billion Merck Silence\u201d",
+    "\ud83d\udd0e web search: \u201c2026 acquisition biotech $ billion announced company press release 2026 pharma\u201d",
+    "\ud83d\udd0e web search: \u201c2025 acquisition healthcare $ billion announced company press release November 2025\u201d",
+    "\ud83d\udd0e web search: \u201c2026 Merck Bio-Techne acquisition $ billion June 2026 press release\u201d",
+    "\ud83d\udd0e web search: \u201cVertex Crinetics acquisition 10 billion July 6 2026 press release\u201d",
+    "\ud83d\udd0e web search: \u201cGilead Arcellx acquisition 2026 $7.8 billion announcement\u201d",
+    "\ud83d\udd0e web search: \u201cDanaher acquisition 2026 $9.9 billion healthcare February 17\u201d",
+    "model call 1: 30,873 in (5,588 cached) / 1,682 out, 4 searches, $0.0434",
+    "returned 5 candidate deals"
+   ]
+  },
+  {
+   "agent": "Gatekeeper (code)",
+   "steps": [
+    "kept 5, rejected 0",
+    "source page matched: Merck KGaA, Darmstadt, Germany / Bio-Techne Corporation (found 73, 11.3, 9.9 on the page)",
+    "source page site blocked bots: Vertex Pharmaceuticals / Crinetics Pharmaceuticals (HTTP 403)",
+    "source page site blocked bots: Danaher Corporation / Masimo Corporation (HTTP 403)",
+    "source page matched: Gilead Sciences / Arcellx (found 115, 7.8 on the page)",
+    "source page site blocked bots: Merck KGaA, Darmstadt, Germany / Silence Therapeutics plc (HTTP 403)"
+   ]
+  },
+  {
+   "agent": "Fact-Checker",
+   "steps": [
+    "\ud83d\udd0e web search: \u201cMerck KGaA Bio-Techne acquisition financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201cVertex Crinetics acquisition financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201cDanaher Masimo acquisition financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201cGilead Arcellx acquisition financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201cMerck Silence Therapeutics acquisition October 19 2026 financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201cSilence Therapeutics Merck 2026 acquisition 1.1 billion\u201d",
+    "model call 1: 20,001 in (4,950 cached) / 926 out, 2 searches, $0.0220",
+    "Bio-Techne Corporation: confirmed \u2013 Merck\u2019s announcement confirms the June 25 agreement and $11.3 billion enterprise value, and names the financial advisors.",
+    "Crinetics Pharmaceuticals: confirmed \u2013 Independent coverage confirms the acquisition and names advisors for both parties; the reported value matches $10 billion.",
+    "Masimo Corporation: confirmed \u2013 Independent coverage confirms the February 17 agreement and $9.9 billion value, and names advisors for both parties.",
+    "Arcellx: confirmed \u2013 Wilson Sonsini confirms Gilead\u2019s February 23 agreement to acquire Arcellx for an implied $7.8 billion; no financial advisors were identified in this source.",
+    "Silence Therapeutics plc: confirmed \u2013 Independent coverage confirms Merck\u2019s October 19 agreement to acquire Silence Therapeutics for $1.1 billion; no financial advisors were identified in this source."
+   ]
+  },
+  {
+   "agent": "score_deals tool (code)",
+   "steps": [
+    " 75.3 \u2013 Vertex Pharmaceuticals / Crinetics Pharmaceuticals",
+    " 74.9 \u2013 Merck KGaA, Darmstadt, Germany / Bio-Techne Corporation",
+    " 67.6 \u2013 Danaher Corporation / Masimo Corporation",
+    " 60.9 \u2013 Merck KGaA, Darmstadt, Germany / Silence Therapeutics plc",
+    " 52.4 \u2013 Gilead Sciences / Arcellx"
+   ]
+  },
+  {
+   "agent": "Analyst",
+   "steps": [
+    "model call 1: 1,420 in (0 cached) / 440 out, 0 searches, $0.0004"
+   ]
+  }
+ ],
+ "safety": [],
+ "cached": false,
+ "error": null,
+ "theme": "These deals show healthcare buyers combining portfolios, platforms and pipelines to build positions across life sciences, diagnostics, specialty disease and cell therapy.",
+ "notes": "Found five interview-worthy deals announced in the requested 12-month window; values use the explicitly reported equity or enterprise value as quoted, and advisor details were not confirmed in the sources used.",
+ "saved_at": 1792858382.11989,
+ "saved_time": "Oct 24 12:13",
+ "usage": {
+  "by_agent": [
+   {
+    "agent": "Scout",
+    "input_tokens": 30873,
+    "cached_tokens": 5588,
+    "cache_write_tokens": 85,
+    "output_tokens": 1682,
+    "reasoning_tokens": 327,
+    "web_searches": 4,
+    "seconds": 15.3,
+    "cost": 0.043427505
+   },
+   {
+    "agent": "Fact-Checker",
+    "input_tokens": 20001,
+    "cached_tokens": 4950,
+    "cache_write_tokens": 527,
+    "output_tokens": 926,
+    "reasoning_tokens": 332,
+    "web_searches": 2,
+    "seconds": 9.9,
+    "cost": 0.022030775000000002
+   },
+   {
+    "agent": "Analyst",
+    "input_tokens": 1420,
+    "cached_tokens": 0,
+    "cache_write_tokens": 1417,
+    "output_tokens": 440,
+    "reasoning_tokens": 31,
+    "web_searches": 0,
+    "seconds": 4.2,
+    "cost": 0.000397425
+   }
+  ],
+  "totals": {
+   "agent": "TOTAL",
+   "input_tokens": 52294,
+   "cached_tokens": 10538,
+   "cache_write_tokens": 2029,
+   "output_tokens": 3048,
+   "reasoning_tokens": 690,
+   "web_searches": 6,
+   "seconds": 29.400000000000002,
+   "cost": 0.06585570500000001
+  }
+ },
+ "elapsed": 30.4
+}

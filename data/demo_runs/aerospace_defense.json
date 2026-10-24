@@ -1,0 +1,496 @@
+{
+ "run_id": "20261024-121052-03db",
+ "criteria": {
+  "industry": "Aerospace & Defense",
+  "focus": "",
+  "min_value_usd_m": 500.0,
+  "months_back": 12,
+  "region": "Global",
+  "deal_types": [
+   "M&A"
+  ],
+  "priority": "Best for interviews",
+  "num_deals": 5,
+  "note": ""
+ },
+ "deals": [
+  {
+   "acquirer": "Parker-Hannifin Corporation",
+   "target": "CIRCOR International\u2019s Commercial and Defense Aerospace business",
+   "deal_type": "Carve-out acquisition",
+   "announced_date": "2026-05-21",
+   "status": "Pending",
+   "value_usd_m": 2550.0,
+   "value_quote": "for a cash purchase price of $2.55 billion, which includes expected tax benefits with an estimated net present value of approximately $75 million.",
+   "ev_ebitda": 22.7,
+   "ev_revenue": null,
+   "multiple_quote": "The purchase price, net of expected tax benefits, represents 22.7x CIRCOR Aerospace\u2019s calendar year 2026 estimated adjusted EBITDA",
+   "buyer_advisors": [
+    "Guggenheim Securities"
+   ],
+   "seller_advisors": [
+    "Goldman Sachs",
+    "Evercore"
+   ],
+   "strategic_rationale": "Parker said the deal adds complementary flight-critical motion and flow-control technologies for current and next-generation commercial and defense platforms, with the business balanced across those markets. ([investors.parker.com](https://investors.parker.com/news-events/press-releases/detail/507/parker-to-acquire-circors-commercial-and-defense))",
+   "source_url": "https://investors.parker.com/news-events/press-releases/detail/507/parker-to-acquire-circors-commercial-and-defense",
+   "source_title": "Parker to Acquire CIRCOR\u2019s Commercial and Defense Aerospace Business",
+   "page_check": "matched",
+   "page_check_note": "found 2.55, 75 on the page",
+   "verdict": "confirmed",
+   "check_note": "Independent reporting confirms the May 21 agreement and $2.55 billion price and names financial advisors for both sides.",
+   "second_source": "https://www.investing.com/news/company-news/parker-hannifin-to-acquire-circor-aerospace-unit-for-255b-93CH-4704221",
+   "advisors_source": "https://www.investing.com/news/company-news/parker-hannifin-to-acquire-circor-aerospace-unit-for-255b-93CH-4704221",
+   "score": 84.6,
+   "score_parts": {
+    "size": 0.72,
+    "recency": 0.57,
+    "banks": 1.0,
+    "multiple": 1.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Parker-Hannifin is adding flight-critical motion and flow-control products across commercial and defense aerospace, while the disclosed 22.7x EV/EBITDA multiple gives investors a clear valuation reference point.",
+   "interview_angle": "A strong deal-to-discuss example for explaining a strategic carve-out and defending a disclosed valuation multiple.",
+   "pitch": {
+    "pitch": {
+     "headline": "Parker-Hannifin to acquire CIRCOR\u2019s aerospace business for $2.55B at 22.7x EV/EBITDA",
+     "sixty_second_pitch": "A deal I\u2019ve been following is Parker-Hannifin\u2019s pending carve-out acquisition of CIRCOR International\u2019s Commercial and Defense Aerospace business, announced May 21, 2026, for $2.55 billion. Parker says the business adds complementary flight-critical motion and flow-control technologies for current and next-generation commercial and defense platforms, with exposure balanced across those markets. The disclosed valuation is 22.7x EV/EBITDA. The available A&D comparables have a median deal value of $826.5 million, but their EBITDA multiples weren\u2019t available, so that\u2019s a size reference rather than a direct valuation comparison. One risk is execution: separating a carve-out while integrating products and operations serving demanding aerospace and defense customers could be complex. Overall, I think the strategic fit is clear given Parker\u2019s stated product and market rationale, but the premium-looking multiple means the value case will depend on successful execution and the acquired business\u2019s growth and profitability.",
+     "key_numbers": [
+      {
+       "label": "Transaction value",
+       "value": "$2.55B"
+      },
+      {
+       "label": "EV/EBITDA",
+       "value": "22.7x"
+      },
+      {
+       "label": "Announced",
+       "value": "May 21, 2026"
+      },
+      {
+       "label": "Status",
+       "value": "Pending"
+      },
+      {
+       "label": "Buyer financial advisor",
+       "value": "Guggenheim Securities"
+      },
+      {
+       "label": "Seller financial advisors",
+       "value": "Goldman Sachs; Evercore"
+      }
+     ],
+     "why_it_makes_sense": [
+      "Adds complementary flight-critical motion and flow-control technologies.",
+      "Extends Parker\u2019s exposure across commercial and defense aerospace platforms.",
+      "The business is described as balanced across commercial and defense markets."
+     ],
+     "risks": [
+      "Carve-out separation and integration may be operationally complex.",
+      "At 22.7x EV/EBITDA, valuation leaves execution and growth assumptions important to the return case.",
+      "The transaction is pending; completion risk remains."
+     ],
+     "interview_questions": [
+      {
+       "question": "Why is Parker pursuing this acquisition?",
+       "answer": "Parker says it adds complementary flight-critical motion and flow-control technologies for current and next-generation commercial and defense platforms, with a balanced market mix."
+      },
+      {
+       "question": "How does the purchase price compare with relevant deals?",
+       "answer": "The stated EV/EBITDA is 22.7x. The available A&D comparables show a median transaction value of $826.5 million, but no median EBITDA multiple, so I can\u2019t make a like-for-like multiple comparison."
+      },
+      {
+       "question": "What is the main risk you would focus on?",
+       "answer": "Carve-out and integration execution. Parker will need to separate and integrate the business while maintaining performance for commercial and defense aerospace customers."
+      }
+     ]
+    },
+    "steps": [
+     "model call 1: 982 in (0 cached) / 38 out, 0 searches, $0.0001",
+     "\ud83d\udcda deal library: 6 comparable deals",
+     "model call 2: 1,376 in (0 cached) / 573 out, 0 searches, $0.0005"
+    ],
+    "cached": false,
+    "error": null,
+    "usage": {
+     "totals": {
+      "agent": "TOTAL",
+      "input_tokens": 2358,
+      "cached_tokens": 0,
+      "cache_write_tokens": 1373,
+      "output_tokens": 611,
+      "reasoning_tokens": 0,
+      "web_searches": 0,
+      "seconds": 7.6,
+      "cost": 0.000575625
+     },
+     "by_agent": [
+      {
+       "agent": "Pitch Coach",
+       "input_tokens": 2358,
+       "cached_tokens": 0,
+       "cache_write_tokens": 1373,
+       "output_tokens": 611,
+       "reasoning_tokens": 0,
+       "web_searches": 0,
+       "seconds": 7.6,
+       "cost": 0.000575625
+      }
+     ]
+    },
+    "safety": []
+   }
+  },
+  {
+   "acquirer": "GE Aerospace",
+   "target": "Consolidated Precision Products (CPP)",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-09-08",
+   "status": "Pending",
+   "value_usd_m": 11750.0,
+   "value_quote": "$11.75 billion transaction",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [
+    "Evercore",
+    "PJT Partners"
+   ],
+   "seller_advisors": [
+    "Morgan Stanley & Co. LLC",
+    "Guggenheim Securities, LLC"
+   ],
+   "strategic_rationale": "GE said CPP\u2019s casting capacity will support demand across commercial engines, aftermarket and defense, while the combination is expected to expand capacity and accelerate new engine technologies. ([geaerospace.com](https://www.geaerospace.com/news/press-releases/ge-aerospace-acquire-consolidated-precision-products-cpp-expanding-mission-critical))",
+   "source_url": "https://www.geaerospace.com/news/press-releases/ge-aerospace-acquire-consolidated-precision-products-cpp-expanding-mission-critical",
+   "source_title": "GE Aerospace to Acquire Consolidated Precision Products (CPP), Expanding Mission-Critical Castings Capacity",
+   "page_check": "not found on page",
+   "page_check_note": "none of 11.75 appear in the page text",
+   "verdict": "confirmed",
+   "check_note": "Independent coverage confirms the September 8 agreement and $11.75 billion value, and names advisors for both sides.",
+   "second_source": "https://www.investing.com/news/company-news/ge-aerospace-to-acquire-consolidated-precision-products-for-1175b-93CH-4891446",
+   "advisors_source": "https://www.investing.com/news/company-news/ge-aerospace-to-acquire-consolidated-precision-products-for-1175b-93CH-4891446",
+   "score": 79.1,
+   "score_parts": {
+    "size": 0.87,
+    "recency": 0.87,
+    "banks": 1.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "GE Aerospace\u2019s acquisition of CPP targets casting capacity to support engine, aftermarket and defense demand while expanding manufacturing capacity and advancing engine technologies.",
+   "interview_angle": "Use it to discuss how a large industrial buyer can address supply capacity and technology needs through an acquisition, while noting that no valuation multiple is disclosed.",
+   "pitch": {
+    "pitch": {
+     "headline": "GE Aerospace to acquire CPP for $11.75B to expand mission-critical casting capacity",
+     "sixty_second_pitch": "A deal I\u2019ve been following is GE Aerospace\u2019s announced acquisition of Consolidated Precision Products, or CPP, for $11.75 billion. The transaction was announced on September 8, 2026, and is pending. GE says CPP\u2019s casting capacity will support demand across commercial engines, aftermarket and defense, while expanding capacity and helping accelerate new engine technologies. The deal\u2019s EBITDA and revenue multiples weren\u2019t disclosed, so I wouldn\u2019t characterize the price as cheap or expensive based on a deal multiple. As context, the available verified Aerospace & Defense comparables have a median disclosed transaction value of about $1.07 billion, and the median EV/EBITDA multiple among those with a disclosed multiple is 22.7x; those are broad reference points, not directly comparable benchmarks. A key risk is whether GE can integrate CPP and expand capacity effectively while meeting demand. Overall, the strategic rationale is clear, but I\u2019d want more information on CPP\u2019s financials and the transaction\u2019s expected returns before judging valuation.",
+     "key_numbers": [
+      {
+       "label": "Announced value",
+       "value": "$11.75B"
+      },
+      {
+       "label": "Announced",
+       "value": "September 8, 2026"
+      },
+      {
+       "label": "Status",
+       "value": "Pending"
+      },
+      {
+       "label": "EV/EBITDA and EV/revenue",
+       "value": "Not disclosed"
+      },
+      {
+       "label": "Advisors",
+       "value": "GE: Evercore and PJT Partners; CPP: Morgan Stanley"
+      }
+     ],
+     "why_it_makes_sense": [
+      "Adds casting capacity to support demand across commercial engines, aftermarket and defense.",
+      "The combination is expected to expand capacity and accelerate new engine technologies."
+     ],
+     "risks": [
+      "Integration and capacity expansion may prove more challenging or slower than expected.",
+      "The transaction\u2019s valuation is difficult to assess without disclosed financials or deal multiples.",
+      "The acquisition remains pending; no closing outcome is established in the provided facts."
+     ],
+     "interview_questions": [
+      {
+       "question": "What is the strategic rationale for the acquisition?",
+       "answer": "GE says CPP\u2019s casting capacity can support demand across commercial engines, aftermarket and defense, while expanding capacity and accelerating new engine technologies."
+      },
+      {
+       "question": "How would you assess the $11.75 billion purchase price?",
+       "answer": "The deal\u2019s EV/EBITDA and EV/revenue multiples weren\u2019t disclosed, so I\u2019d need CPP\u2019s financials to assess valuation. As broad context, the verified comparable set has a $1.07 billion median disclosed deal value and a 22.7x median EV/EBITDA among deals with a disclosed multiple, but those aren\u2019t necessarily directly comparable."
+      },
+      {
+       "question": "What is a key risk you would monitor?",
+       "answer": "I\u2019d monitor integration and whether GE can expand CPP\u2019s capacity effectively to support the demand and technology objectives it cited."
+      }
+     ]
+    },
+    "steps": [
+     "model call 1: 950 in (0 cached) / 36 out, 0 searches, $0.0001",
+     "\ud83d\udcda deal library: 6 comparable deals",
+     "model call 2: 1,358 in (0 cached) / 766 out, 0 searches, $0.0006"
+    ],
+    "cached": true,
+    "error": null,
+    "usage": {
+     "totals": {
+      "input_tokens": 0,
+      "cached_tokens": 0,
+      "output_tokens": 0,
+      "cost": 0.0,
+      "web_searches": 0
+     }
+    },
+    "safety": []
+   }
+  },
+  {
+   "acquirer": "Joby Aviation, Inc.",
+   "target": "Resonant Sciences",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-08-11",
+   "status": "Pending",
+   "value_usd_m": 500.0,
+   "value_quote": "for approximately $500 million.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [],
+   "seller_advisors": [
+    "Baird"
+   ],
+   "strategic_rationale": "Joby said Resonant will become its dedicated defense business, adding established defense programs, classified capabilities and scaled manufacturing; Joby plans to consolidate its own defense initiatives into that unit. ([jobyaviation.com](https://www.jobyaviation.com/news/joby-aviation-to-scale-defense-business-through-acquisition-of-resonant-sciences))",
+   "source_url": "https://www.jobyaviation.com/news/joby-aviation-to-scale-defense-business-through-acquisition-of-resonant-sciences",
+   "source_title": "Joby Aviation to Scale Defense Business Through Acquisition of Resonant Sciences",
+   "page_check": "matched",
+   "page_check_note": "found 500 on the page",
+   "verdict": "confirmed",
+   "check_note": "Baird\u2019s deal page confirms the approximately $500 million Joby acquisition and identifies Baird as Resonant\u2019s advisor.",
+   "second_source": "https://www.rwbaird.com/transactions/investment-banking/dealcard/6765/",
+   "advisors_source": "https://www.rwbaird.com/transactions/investment-banking/dealcard/6765/",
+   "score": 59.8,
+   "score_parts": {
+    "size": 0.57,
+    "recency": 0.8,
+    "banks": 0.3,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "Joby is building a dedicated defense business by combining Resonant\u2019s established programs and capabilities with its own defense initiatives.",
+   "interview_angle": "A useful example for discussing how an emerging aviation company could diversify into defense, with the rationale centered on creating a dedicated business unit."
+  },
+  {
+   "acquirer": "MDA Space",
+   "target": "Blue Canyon Technologies LLC",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-06-19",
+   "status": "Pending",
+   "value_usd_m": 620.0,
+   "value_quote": "The Company has signed a definitive agreement to acquire 100% of the membership interests of Blue Canyon Technologies LLC in an all-cash transaction for a purchase price and enterprise value of US$620 million (approximately C$874 million), subject to purchase price adjustments.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [],
+   "seller_advisors": [
+    "Robert W. Baird & Co. Incorporated"
+   ],
+   "strategic_rationale": "MDA said the acquisition adds spacecraft and satellite-component capabilities, a U.S. manufacturing footprint and opportunities to pursue growing U.S. government demand for defense-space missions. ([mda.space](https://mda.space/article/mda-space-announces-definitive-agreement-to-acquire-us-based-blue-canyon-technologies-llc))",
+   "source_url": "https://mda.space/article/mda-space-announces-definitive-agreement-to-acquire-us-based-blue-canyon-technologies-llc",
+   "source_title": "MDA Space announces definitive agreement to acquire US-based Blue Canyon Technologies LLC",
+   "page_check": "not found on page",
+   "page_check_note": "none of 100, 620, 874 appear in the page text",
+   "verdict": "confirmed",
+   "check_note": "Baird\u2019s deal page confirms the $620 million acquisition and identifies itself as advisor to Blue Canyon and RTX.",
+   "second_source": "https://www.rwbaird.com/transactions/investment-banking/dealcard/6738/",
+   "advisors_source": "https://www.rwbaird.com/transactions/investment-banking/dealcard/6738/",
+   "score": 57.4,
+   "score_parts": {
+    "size": 0.59,
+    "recency": 0.65,
+    "banks": 0.3,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "MDA Space is adding spacecraft and satellite-component capabilities and a U.S. manufacturing footprint to pursue defense-space demand.",
+   "interview_angle": "Use it to explain the strategic value of combining complementary space capabilities with a U.S. footprint, while acknowledging the deal has no disclosed valuation multiple."
+  },
+  {
+   "acquirer": "TransDigm Group Incorporated",
+   "target": "Prince & Izant",
+   "deal_type": "Acquisition",
+   "announced_date": "2026-07-27",
+   "status": "Closed",
+   "value_usd_m": 1066.0,
+   "value_quote": "for approximately $1.066 billion in cash, including certain tax benefits.",
+   "ev_ebitda": null,
+   "ev_revenue": null,
+   "multiple_quote": "",
+   "buyer_advisors": [],
+   "seller_advisors": [],
+   "strategic_rationale": "Prince & Izant makes specialized brazing alloys and metal components for aerospace and defense applications, including aircraft engine fuel nozzles and rocket engines, extending TransDigm\u2019s portfolio of engineered aerospace components. ([transdigmgroupinc.gcs-web.com](https://transdigmgroupinc.gcs-web.com/news-releases/news-release-details/transdigm-announces-acquisition-prince-izant))",
+   "source_url": "https://transdigmgroupinc.gcs-web.com/news-releases/news-release-details/transdigm-announces-acquisition-prince-izant",
+   "source_title": "TransDigm Announces Acquisition of Prince & Izant",
+   "page_check": "site blocked bots",
+   "page_check_note": "HTTP 403",
+   "verdict": "confirmed",
+   "check_note": "Independent coverage confirms the July 27 agreement and approximately $1.066 billion value; no financial advisors were identified.",
+   "second_source": "https://www.peprofessional.com/2026/07/transdigm-to-acquire-prince-izant-from-igp/",
+   "score": 56.2,
+   "score_parts": {
+    "size": 0.64,
+    "recency": 0.76,
+    "banks": 0.0,
+    "multiple": 0.0,
+    "trust": 1.0
+   },
+   "why_it_matters": "TransDigm is extending its engineered aerospace-components portfolio with specialized brazing alloys and metal components used in aircraft and rocket engines.",
+   "interview_angle": "A straightforward example for discussing portfolio expansion into specialized aerospace components, though the provided fields do not disclose an advisor or valuation multiple."
+  }
+ ],
+ "rejected": [],
+ "trace": [
+  {
+   "agent": "Input guard (code)",
+   "steps": [
+    "criteria: Aerospace & Defense | \u2265 $500M | last 12 months | Global | Best for interviews",
+    "free-text note: none"
+   ]
+  },
+  {
+   "agent": "Scout",
+   "steps": [
+    "model call 1: 5,738 in (0 cached) / 79 out, 0 searches, $0.0008",
+    "\ud83d\udcc4 SEC EDGAR search: \u201caerospace defense acquisition merger agreement\u201d \u2192 8 filings",
+    "\ud83d\udcc4 SEC EDGAR search: \u201cdefense aerospace to acquire\u201d \u2192 8 filings",
+    "\ud83d\udcc4 SEC EDGAR search: \u201csatellite aerospace acquisition agreement\u201d \u2192 8 filings",
+    "\ud83d\udd0e web search: \u201c2026 aerospace defense acquisition announced $ billion 2026 deal\u201d",
+    "\ud83d\udd0e web search: \u201c2025 aerospace defense acquisition $500 million announced October November 2025\u201d",
+    "\ud83d\udd0e web search: \u201c2026 defense contractor acquisition $500 million deal announced\u201d",
+    "\ud83d\udd0e web search: \u201c2026 aerospace M&A acquisition deal announced value\u201d",
+    "\ud83d\udd0e web search: \u201c2026 aerospace defense acquisition announced $ billion 2026 deal\u201d",
+    "\ud83d\udd0e web search: \u201c2025 aerospace defense acquisition $500 million announced October November 2025\u201d",
+    "\ud83d\udd0e web search: \u201c2026 defense contractor acquisition $500 million deal announced\u201d",
+    "\ud83d\udd0e web search: \u201c\"acquire\" \"aerospace\" \"2026\" \"$\" acquisition aerospace defense announced 2026\u201d",
+    "\ud83d\udd0e web search: \u201cdefense aerospace M&A 2025 acquisition announced October 2025 $ billion\u201d",
+    "\ud83d\udd0e web search: \u201csite:reuters.com 2026 defense acquisition aerospace buy deal\u201d",
+    "\ud83d\udd0e web search: \u201cTransDigm Prince & Izant acquisition July 27 2026 $1.066 billion press release\u201d",
+    "\ud83d\udd0e web search: \u201cGE Aerospace CPP $11.75 billion acquisition exact sentence September 8 2026\u201d",
+    "model call 2: 31,415 in (5,670 cached) / 1,642 out, 5 searches, $0.0535",
+    "returned 5 candidate deals"
+   ]
+  },
+  {
+   "agent": "Gatekeeper (code)",
+   "steps": [
+    "kept 5, rejected 0",
+    "source page not found on page: GE Aerospace / Consolidated Precision Products (CPP) (none of 11.75 appear in the page text)",
+    "source page not found on page: MDA Space / Blue Canyon Technologies LLC (none of 100, 620, 874 appear in the page text)",
+    "source page matched: Parker-Hannifin Corporation / CIRCOR International\u2019s Commercial and Defense Aerospace business (found 2.55, 75 on the page)",
+    "source page site blocked bots: TransDigm Group Incorporated / Prince & Izant (HTTP 403)",
+    "source page matched: Joby Aviation, Inc. / Resonant Sciences (found 500 on the page)"
+   ]
+  },
+  {
+   "agent": "Fact-Checker",
+   "steps": [
+    "\ud83d\udd0e web search: \u201cGE Aerospace Consolidated Precision Products acquisition financial advisor September 2026\u201d",
+    "\ud83d\udd0e web search: \u201cMDA Space Blue Canyon Technologies acquisition financial advisor June 2026\u201d",
+    "\ud83d\udd0e web search: \u201cParker Hannifin CIRCOR Commercial Defense Aerospace acquisition financial advisor May 2026\u201d",
+    "\ud83d\udd0e web search: \u201cTransDigm Prince Izant acquisition financial advisor July 2026\u201d",
+    "\ud83d\udd0e web search: \u201cJoby Aviation Resonant Sciences acquisition $500 million financial advisor 2026\u201d",
+    "\ud83d\udd0e web search: \u201cGE Aerospace CPP acquisition advisor financial advisor 2026\u201d",
+    "\ud83d\udd0e web search: \u201cParker Hannifin CIRCOR $2.55 billion purchase price 2026\u201d",
+    "\ud83d\udd0e web search: \u201cTransDigm Prince Izant financial advisor 2026\u201d",
+    "\ud83d\udd0e web search: \u201cMDA Blue Canyon acquisition Baird advisor financial advisor seller 2026\u201d",
+    "\ud83d\udd0e web search: \u201cTransDigm Prince Izant financial advisors bank advisor 2026\u201d",
+    "\ud83d\udd0e web search: \u201cParker CIRCOR financial advisors banks 2026\u201d",
+    "\ud83d\udd0e web search: \u201c\"MDA Space\" \"Blue Canyon\" \"Baird\" financial advisor\u201d",
+    "\ud83d\udd0e web search: \u201c\"Prince & Izant\" \"financial advisor\" TransDigm\u201d",
+    "\ud83d\udd0e web search: \u201c\"CIRCOR\" \"financial advisor\" Parker Hannifin\u201d",
+    "model call 1: 28,862 in (4,950 cached) / 875 out, 4 searches, $0.0429",
+    "Consolidated Precision Products (CPP): confirmed \u2013 Independent coverage confirms the September 8 agreement and $11.75 billion value, and names advisors for both sides.",
+    "Blue Canyon Technologies LLC: confirmed \u2013 Baird\u2019s deal page confirms the $620 million acquisition and identifies itself as advisor to Blue Canyon and RTX.",
+    "CIRCOR International\u2019s Commercial and Defense Aerospace business: confirmed \u2013 Independent reporting confirms the May 21 agreement and $2.55 billion price and names financial advisors for both sides.",
+    "Prince & Izant: confirmed \u2013 Independent coverage confirms the July 27 agreement and approximately $1.066 billion value; no financial advisors were identified.",
+    "Resonant Sciences: confirmed \u2013 Baird\u2019s deal page confirms the approximately $500 million Joby acquisition and identifies Baird as Resonant\u2019s advisor."
+   ]
+  },
+  {
+   "agent": "score_deals tool (code)",
+   "steps": [
+    " 84.6 \u2013 Parker-Hannifin Corporation / CIRCOR International\u2019s Commercial and Defense Aerospace business",
+    " 79.1 \u2013 GE Aerospace / Consolidated Precision Products (CPP)",
+    " 59.8 \u2013 Joby Aviation, Inc. / Resonant Sciences",
+    " 57.4 \u2013 MDA Space / Blue Canyon Technologies LLC",
+    " 56.2 \u2013 TransDigm Group Incorporated / Prince & Izant"
+   ]
+  },
+  {
+   "agent": "Analyst",
+   "steps": [
+    "model call 1: 1,546 in (0 cached) / 392 out, 0 searches, $0.0004"
+   ]
+  }
+ ],
+ "safety": [],
+ "cached": false,
+ "error": null,
+ "theme": "These deals show aerospace and defense buyers adding specialized manufacturing, mission-critical components and space or defense capabilities to address demand across commercial, defense and government markets.",
+ "notes": "Found five qualifying announced deals in the 12-month window; the list prioritizes interview-worthy strategic transactions with disclosed values, and advisor names were not confirmed in the sources reviewed.",
+ "saved_at": 1792858279.0063848,
+ "saved_time": "Oct 24 12:11",
+ "usage": {
+  "by_agent": [
+   {
+    "agent": "Scout",
+    "input_tokens": 37153,
+    "cached_tokens": 5670,
+    "cache_write_tokens": 7784,
+    "output_tokens": 1721,
+    "reasoning_tokens": 531,
+    "web_searches": 5,
+    "seconds": 1.6,
+    "cost": 0.054260100000000006
+   },
+   {
+    "agent": "Fact-Checker",
+    "input_tokens": 28862,
+    "cached_tokens": 4950,
+    "cache_write_tokens": 540,
+    "output_tokens": 875,
+    "reasoning_tokens": 312,
+    "web_searches": 4,
+    "seconds": 17.3,
+    "cost": 0.0428917
+   },
+   {
+    "agent": "Analyst",
+    "input_tokens": 1546,
+    "cached_tokens": 0,
+    "cache_write_tokens": 1543,
+    "output_tokens": 392,
+    "reasoning_tokens": 0,
+    "web_searches": 0,
+    "seconds": 3.3,
+    "cost": 0.000389175
+   }
+  ],
+  "totals": {
+   "agent": "TOTAL",
+   "input_tokens": 67561,
+   "cached_tokens": 10620,
+   "cache_write_tokens": 9867,
+   "output_tokens": 2988,
+   "reasoning_tokens": 843,
+   "web_searches": 9,
+   "seconds": 22.200000000000003,
+   "cost": 0.09754097500000002
+  }
+ },
+ "elapsed": 26.3
+}

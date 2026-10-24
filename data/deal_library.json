@@ -1,0 +1,233 @@
+[
+ {
+  "acquirer": "GE Aerospace",
+  "target": "Consolidated Precision Products (CPP)",
+  "announced_date": "2026-09-08",
+  "value_usd_m": 11750.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.geaerospace.com/news/press-releases/ge-aerospace-acquire-consolidated-precision-products-cpp-expanding-mission-critical",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Joby Aviation",
+  "target": "Resonant Sciences",
+  "announced_date": "2026-08-11",
+  "value_usd_m": 500.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://ir.jobyaviation.com/news-events/press-releases/detail/189/joby-aviation-to-scale-defense-business-through-acquisition-of-resonant-sciences",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Howmet Aerospace",
+  "target": "Consolidated Aerospace Manufacturing (CAM)",
+  "announced_date": "2025-12-22",
+  "value_usd_m": 1800.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.howmet.com/financial-release/2025-12-22/howmet-aerospace-to-acquire-consolidated-aerospace-manufacturing-from-stanley-black-decker-for-approximately-1-8-billion/",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Parker-Hannifin Corporation",
+  "target": "CIRCOR International\u2019s Commercial and Defense Aerospace business",
+  "announced_date": "2026-05-21",
+  "value_usd_m": 2550.0,
+  "ev_ebitda": 22.7,
+  "ev_revenue": null,
+  "deal_type": "Carve-out acquisition",
+  "source_url": "https://investors.parker.com/news-events/press-releases/detail/507/parker-to-acquire-circors-commercial-and-defense",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "TransDigm Group Incorporated",
+  "target": "Prince & Izant",
+  "announced_date": "2026-07-27",
+  "value_usd_m": 1066.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://transdigmgroupinc.gcs-web.com/news-releases/news-release-details/transdigm-announces-acquisition-prince-izant",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Joby Aviation, Inc.",
+  "target": "Resonant Sciences",
+  "announced_date": "2026-08-11",
+  "value_usd_m": 500.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.jobyaviation.com/news/joby-aviation-to-scale-defense-business-through-acquisition-of-resonant-sciences",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "MDA Space",
+  "target": "Blue Canyon Technologies LLC",
+  "announced_date": "2026-06-19",
+  "value_usd_m": null,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://mda.space/article/mda-space-announces-definitive-agreement-to-acquire-us-based-blue-canyon-technologies-llc",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Rocket Lab Corporation",
+  "target": "Iridium Communications Inc.",
+  "announced_date": "2026-06-29",
+  "value_usd_m": 8000.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Amazon.com, Inc.",
+  "target": "Globalstar, Inc.",
+  "announced_date": "2026-04-14",
+  "value_usd_m": 11570.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://press.aboutamazon.com/2026/4/amazon-to-acquire-globalstar-and-expand-amazon-leo-satellite-network",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Proem Acquisition Corp. I",
+  "target": "Astro Digital",
+  "announced_date": "2026-09-28",
+  "value_usd_m": 587.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "SPAC merger",
+  "source_url": "https://www.satellitetoday.com/finance/2026/09/29/astro-digital-takes-spac-deal-to-scale-satellite-manufacturing/",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "SpaceX",
+  "target": "xAI",
+  "announced_date": "2026-02-02",
+  "value_usd_m": null,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Merger",
+  "source_url": "https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Proofpoint",
+  "target": "Varonis Systems, Inc.",
+  "announced_date": "2026-10-15",
+  "value_usd_m": 6300.0,
+  "ev_ebitda": null,
+  "ev_revenue": 8.4,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.proofpoint.com/us/newsroom/press-releases/proofpoint-acquire-varonis-creating-global-leader-data-and-ai-security",
+  "industry": "Technology / Software"
+ },
+ {
+  "acquirer": "Schneider Electric",
+  "target": "PTC Inc.",
+  "announced_date": "2026-10-05",
+  "value_usd_m": 23700.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.se.com/ww/en/assets/pdf/Schneider-Electric-to-acquire-PTC",
+  "industry": "Technology / Software"
+ },
+ {
+  "acquirer": "Salesforce",
+  "target": "Braze, Inc.",
+  "announced_date": "2026-10-20",
+  "value_usd_m": 5660.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.salesforce.com/news/press-releases/2026/10/20/salesforce-signs-definitive-agreement-to-acquire-braze/",
+  "industry": "Technology / Software"
+ },
+ {
+  "acquirer": "IBM",
+  "target": "Confluent, Inc.",
+  "announced_date": "2025-12-08",
+  "value_usd_m": 11000.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://newsroom.ibm.com/2025-12-08-ibm-to-acquire-confluent-to-create-smart-data-platform-for-enterprise-generative-ai",
+  "industry": "Technology / Software"
+ },
+ {
+  "acquirer": "GTCR and Elliott Investment Management",
+  "target": "CCC Intelligent Solutions Holdings Inc.",
+  "announced_date": "2026-10-15",
+  "value_usd_m": null,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "LBO / take-private",
+  "source_url": "https://www.cccis.com/news-and-insights/posts/ccc-intelligent-solutions-signs-definitive-agreement-to-be-acquired-by-gtcr-and-elliott",
+  "industry": "Technology / Software"
+ },
+ {
+  "acquirer": "Vertex Pharmaceuticals",
+  "target": "Crinetics Pharmaceuticals",
+  "announced_date": "2026-07-06",
+  "value_usd_m": 10000.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://news.vrtx.com/news-releases/news-release-details/vertex-acquire-crinetics-pharmaceuticals",
+  "industry": "Healthcare & Biotech"
+ },
+ {
+  "acquirer": "Merck KGaA, Darmstadt, Germany",
+  "target": "Bio-Techne Corporation",
+  "announced_date": "2026-06-25",
+  "value_usd_m": 11300.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.bio-techne.com/press-releases/detail/535/merck-kgaa-darmstadt-germany-agrees-to-acquire",
+  "industry": "Healthcare & Biotech"
+ },
+ {
+  "acquirer": "Danaher Corporation",
+  "target": "Masimo Corporation",
+  "announced_date": "2026-02-17",
+  "value_usd_m": 9900.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.masimo.com/media/masimo-to-be-acquired-by-danaher",
+  "industry": "Healthcare & Biotech"
+ },
+ {
+  "acquirer": "Merck KGaA, Darmstadt, Germany",
+  "target": "Silence Therapeutics plc",
+  "announced_date": "2026-10-19",
+  "value_usd_m": 1100.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.merckgroup.com/en/news/silence-therapeutics-19-10-2026.html",
+  "industry": "Healthcare & Biotech"
+ },
+ {
+  "acquirer": "Gilead Sciences",
+  "target": "Arcellx",
+  "announced_date": "2026-02-23",
+  "value_usd_m": 7800.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.gilead.com/news/news-details/2026/gilead-sciences-completes-acquisition-of-arcellx-ahead-of-potential-commercial-launch-of-anito-cel",
+  "industry": "Healthcare & Biotech"
+ }
+]
