@@ -6,6 +6,8 @@ from __future__ import annotations
 
 import json
 import time
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError as FuturesTimeout
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
@@ -26,13 +28,30 @@ class MissingKey(RuntimeError):
     pass
 
 
+class AgentTimeout(RuntimeError):
+    """A model call did not finish within CALL_DEADLINE_S."""
+
+
+_pool = ThreadPoolExecutor(max_workers=8)
+
+
+def _call_with_deadline(kwargs: dict, agent: str):
+    """Run one API call, but give up after CALL_DEADLINE_S no matter what the network or gateway does."""
+    fut = _pool.submit(lambda: client().responses.with_raw_response.parse(**kwargs))
+    try:
+        raw = fut.result(timeout=config.CALL_DEADLINE_S)
+    except FuturesTimeout:
+        raise AgentTimeout(f"{agent} took longer than {config.CALL_DEADLINE_S} s and was stopped.") from None
+    return raw.parse(), (raw.headers.get("x-portkey-cache-status") or "").upper()
+
+
 def client() -> OpenAI:
     global _client
     if _client is None:
         key = config.portkey_key()
         if not key:
             raise MissingKey("PORTKEY_API_KEY was not found. Put it in a .env file in this folder or the folder above it.")
-        _client = OpenAI(api_key=key, base_url=config.PORTKEY_BASE_URL, timeout=180, max_retries=1,
+        _client = OpenAI(api_key=key, base_url=config.PORTKEY_BASE_URL, timeout=config.CALL_DEADLINE_S, max_retries=0,
                          default_headers={"x-portkey-api-key": key, "x-portkey-provider": config.PORTKEY_PROVIDER})
     return _client
 
@@ -70,7 +89,7 @@ def run_agent(ledger: Ledger, agent: str, user_input: str, text_format, *, web_s
         if prev_id:
             kwargs["previous_response_id"] = prev_id
         t0 = time.time()
-        r = client().responses.parse(**kwargs)
+        r, cache_status = _call_with_deadline(kwargs, agent)
         u = r.usage
         searches = [o for o in r.output if o.type == "web_search_call"]
         rec = ledger.add(CallRecord(
@@ -79,7 +98,8 @@ def run_agent(ledger: Ledger, agent: str, user_input: str, text_format, *, web_s
             cache_write_tokens=getattr(u.input_tokens_details, "cache_write_tokens", 0) or 0,
             output_tokens=u.output_tokens,
             reasoning_tokens=getattr(u.output_tokens_details, "reasoning_tokens", 0) or 0,
-            web_searches=len(searches), seconds=round(time.time() - t0, 1)))
+            web_searches=len(searches), seconds=round(time.time() - t0, 1),
+            gateway_cache_hits=int(cache_status == "HIT")))
         for s in searches:
             action = s.model_dump().get("action") or {}
             for q in (action.get("queries") or [action.get("query")]):
@@ -96,7 +116,8 @@ def run_agent(ledger: Ledger, agent: str, user_input: str, text_format, *, web_s
                             res.searched_urls.add(a.url)
         res.steps.append(f"model call {round_no + 1}: {rec.input_tokens:,} in "
                          f"({rec.cached_tokens:,} cached) / {rec.output_tokens:,} out, "
-                         f"{rec.web_searches} searches, ${rec.cost:.4f}")
+                         f"{rec.web_searches} searches, ${rec.cost:.4f}"
+                         + ("  (Portkey cache hit – replayed, $0)" if rec.gateway_cache_hits else ""))
 
         calls = [o for o in r.output if o.type == "function_call"]
         if not calls:

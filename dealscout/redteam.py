@@ -101,7 +101,30 @@ def run_all() -> list[Result]:
     except BudgetExceeded as e:
         out.append(Result("A looping agent keeps calling the model after the run budget is spent", True, str(e)))
 
-    # 8. Too many searches from one user
+    # 8. A model call hangs (the real Fact-Checker once took 1,190 s before this guard existed)
+    import time as _t
+    from . import agents
+
+    class _Stuck:  # stands in for the API client; never answers in time
+        class responses:
+            class with_raw_response:
+                @staticmethod
+                def parse(**kw):
+                    _t.sleep(3)
+
+    saved_client, saved_deadline = agents._client, config.CALL_DEADLINE_S
+    agents._client, config.CALL_DEADLINE_S = _Stuck(), 1
+    t0 = _t.time()
+    try:
+        agents._call_with_deadline({}, "Fact-Checker")
+        out.append(Result("An agent's API call hangs (real incident: 1,190 s)", False, "call was allowed to hang"))
+    except agents.AgentTimeout as e:
+        out.append(Result("An agent's API call hangs (real incident: 1,190 s)", _t.time() - t0 < 2.5,
+                          f"stopped after {_t.time() - t0:.1f} s: {e} (deadline set to 1 s for this test)"))
+    finally:
+        agents._client, config.CALL_DEADLINE_S = saved_client, saved_deadline
+
+    # 9. Too many searches from one user
     pipeline._recent_runs.pop("redteam", None)
     blocked = None
     for i in range(config.RUNS_PER_10_MIN + 1):

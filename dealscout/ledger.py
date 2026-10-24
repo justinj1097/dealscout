@@ -30,9 +30,12 @@ class CallRecord:
     web_searches: int = 0
     seconds: float = 0.0
     cost: float = 0.0
+    gateway_cache_hits: int = 0   # Portkey replayed a stored answer: no provider charge
 
 
 def call_cost(r: CallRecord) -> float:
+    if r.gateway_cache_hits:
+        return 0.0
     p = config.PRICE_PER_M
     fresh = max(r.input_tokens - r.cached_tokens - r.cache_write_tokens, 0)
     tokens = (fresh * p["input"] + r.cached_tokens * p["cached_input"]
@@ -102,7 +105,7 @@ class Ledger:
         for c in self.calls:
             r = rows.setdefault(c.agent, CallRecord(agent=c.agent))
             for k in ("input_tokens", "cached_tokens", "cache_write_tokens", "output_tokens",
-                      "reasoning_tokens", "web_searches", "seconds", "cost"):
+                      "reasoning_tokens", "web_searches", "seconds", "cost", "gateway_cache_hits"):
                 setattr(r, k, getattr(r, k) + getattr(c, k))
         return [asdict(r) for r in rows.values()]
 
@@ -110,7 +113,7 @@ class Ledger:
         t = CallRecord(agent="TOTAL")
         for c in self.calls:
             for k in ("input_tokens", "cached_tokens", "cache_write_tokens", "output_tokens",
-                      "reasoning_tokens", "web_searches", "seconds", "cost"):
+                      "reasoning_tokens", "web_searches", "seconds", "cost", "gateway_cache_hits"):
                 setattr(t, k, getattr(t, k) + getattr(c, k))
         return asdict(t)
 

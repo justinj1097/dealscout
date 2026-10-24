@@ -19,7 +19,7 @@ from urllib.parse import urlparse
 
 from . import agents, config, safety, tools
 from .ledger import BudgetExceeded, Ledger
-from .models import Criteria
+from .models import AnalystReport, CheckReport, Criteria
 
 _recent_runs: dict[str, deque] = defaultdict(deque)
 
@@ -168,7 +168,11 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
             return _finish(out, ledger, log, t0)
 
         say("Fact-Checker is confirming each deal with a second source…")
-        fc = agents.fact_checker(ledger, deals)
+        try:
+            fc = agents.fact_checker(ledger, deals)
+        except (agents.AgentTimeout, BudgetExceeded) as e:  # degrade, don't fail: show deals as unconfirmed
+            log.add("agent stopped", "Fact-Checker", f"{e} Deals are shown as 'not independently confirmed'.")
+            fc = agents.AgentResult(parsed=CheckReport(checks=[]), steps=[f"⚠ stopped: {e}"])
         checks = {ck.deal_index: ck for ck in fc.parsed.checks}
         for i, d in enumerate(deals):
             ck = checks.get(i)
@@ -197,7 +201,11 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
         trace.append({"agent": "score_deals tool (code)", "steps": [f"{d['score']:>5} – {d['acquirer']} / {d['target']}" for d in deals]})
 
         say("Analyst is writing why each deal matters…")
-        an = agents.analyst(ledger, c, deals)
+        try:
+            an = agents.analyst(ledger, c, deals)
+        except (agents.AgentTimeout, BudgetExceeded) as e:
+            log.add("agent stopped", "Analyst", f"{e} Showing the Scout's rationale instead.")
+            an = agents.AgentResult(parsed=AnalystReport(takes=[], industry_theme=""), steps=[f"⚠ stopped: {e}"])
         for t in an.parsed.takes:
             if 0 <= t.deal_index < len(deals):
                 d = deals[t.deal_index]
@@ -212,8 +220,9 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
         result = _finish(out, ledger, log, t0)
         (config.CACHE_DIR / f"hunt_{key}.json").write_text(json.dumps(result))
         return result
-    except (BudgetExceeded, RateLimited) as e:
-        log.add("budget stop" if isinstance(e, BudgetExceeded) else "rate limit", "orchestrator", str(e))
+    except (BudgetExceeded, RateLimited, agents.AgentTimeout) as e:
+        kind = {BudgetExceeded: "budget stop", RateLimited: "rate limit"}.get(type(e), "agent stopped")
+        log.add(kind, "orchestrator", str(e))
         out["error"] = str(e)
     except agents.MissingKey as e:
         out["error"] = str(e)
@@ -247,7 +256,7 @@ def pitch(industry: str, deal: dict, session_id: str = "local") -> dict:
         p = r.parsed.model_dump()
         p["sixty_second_pitch"] = safety.clean_untrusted(p["sixty_second_pitch"], "pitch", deal["target"], log, 1500)
         data = {"pitch": p, "steps": r.steps, "cached": False, "error": None}
-    except (BudgetExceeded, agents.MissingKey) as e:
+    except (BudgetExceeded, agents.MissingKey, agents.AgentTimeout) as e:
         data = {"pitch": None, "steps": [], "cached": False, "error": str(e)}
     except Exception as e:
         data = {"pitch": None, "steps": [], "cached": False, "error": f"Pitch failed ({type(e).__name__}). Try again."}

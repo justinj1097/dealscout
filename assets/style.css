@@ -119,3 +119,6 @@ table.t tr.total td { font-weight: 800; color: var(--pink2); }
 .radio-row .dash-options-list-option { display: flex !important; align-items: center; gap: 8px; padding: 5px 0; }
 .radio-row .dash-options-list-option-wrapper { display: inline-flex; }
 .radio-row .dash-options-list-option.selected { color: var(--pink2); }
+#note, .field textarea { background: var(--panel2) !important; color: var(--text) !important; border: 1px solid var(--line) !important; }
+#note:focus { border-color: var(--pink) !important; }
+#focus, #industry-other { background: var(--panel2) !important; color: var(--text) !important; }

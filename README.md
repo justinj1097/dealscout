@@ -66,7 +66,7 @@ Healthcare & Biotech), including pitches for the top two deals. They cost nothin
    three likely follow-up questions with model answers.
 4. The other tabs show **How the agents worked** (step-by-step trace), **Cost** (real token counts per
    agent from this run), and **Safety** (everything that was blocked or removed).
-5. **Run the red-team safety check** throws 8 attacks at the app's defenses — offline, $0.
+5. **Run the red-team safety check** throws 9 attacks at the app's defenses — offline, $0.
 
 ---
 
@@ -129,7 +129,7 @@ dealscout/pipeline.py  orchestrator, Gatekeeper, cache, pitch generation
 dealscout/safety.py    injection detection, page cleaning, grounding checks, redaction
 dealscout/ledger.py    token ledger, cost math, per-run / per-day caps
 dealscout/tools.py     SEC EDGAR search, scoring formula, deal library / comparables
-dealscout/redteam.py   the 8 offline attacks behind the red-team button and tests
+dealscout/redteam.py   the 9 offline attacks behind the red-team button and tests
 dealscout/prompts/     each agent's instructions
 tests/                 pytest suite
 docs/                  report.html, slides.html, screenshots

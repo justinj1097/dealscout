@@ -59,7 +59,7 @@ def search_panel():
                      placeholder="Choose an example…"),
         html.Div(className="divider"),
         html.Button("Run the red-team safety check", id="redteam-btn", className="btn ghost"),
-        html.P("Throws 8 attacks at the app's defenses. Offline, $0.", className="hint", style={"marginTop": "8px", "textAlign": "center"}),
+        html.P("Throws 9 attacks at the app's defenses. Offline, $0.", className="hint", style={"marginTop": "8px", "textAlign": "center"}),
     ])
 
 

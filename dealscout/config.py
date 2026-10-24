@@ -65,6 +65,7 @@ RUN_COST_CAP = 0.25              # dollars for one run
 DAILY_COST_CAP = float(os.getenv("DEALSCOUT_DAILY_BUDGET", "2.00"))  # dollars per day, whole app
 RUNS_PER_10_MIN = 6              # live hunts allowed per browser session per 10 minutes
 CACHE_TTL_HOURS = 24             # how long a saved hunt is reused for an identical request
+CALL_DEADLINE_S = 120            # hard wall-clock limit for one model call (a hung call can't freeze the app)
 
 # SEC asks automated tools to identify themselves. Override with your own contact in .env if you like.
 SEC_USER_AGENT = os.getenv("SEC_USER_AGENT", "DealScout student research app (contact: dealscout@example.com)")
