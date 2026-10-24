@@ -10,6 +10,7 @@ import os
 import uuid
 
 from dash import ALL, Dash, Input, Output, State, ctx, dcc, html, no_update
+from flask import request
 
 from dealscout import config, pipeline, redteam
 from dealscout.models import Criteria
@@ -251,6 +252,12 @@ def safety_view(h, rt):
     return html.Div(blocks)
 
 
+def visitor_id() -> str:
+    """Rate limits are per visitor (IP address), not per browser tab, so opening new tabs doesn't reset them."""
+    fwd = request.headers.get("X-Forwarded-For", "")
+    return (fwd.split(",")[0].strip() if fwd else request.remote_addr) or "unknown"
+
+
 # ------------------------------------------------------------------ callbacks
 @app.callback(Output("other-wrap", "style"), Input("industry", "value"))
 def toggle_other(v):
@@ -293,7 +300,7 @@ def run(go, demo, rt, industry, other, focus, mn, months, region, priority, num,
         return {"error": "Please type your industry.", "deals": []}, "deals", None
     c = Criteria(industry=ind[:60], focus=(focus or "")[:80], min_value_usd_m=mn, months_back=months, region=region,
                  priority=priority, num_deals=num, note=note or "")
-    return pipeline.hunt(c, session_id=session or "anon"), "deals", None
+    return pipeline.hunt(c, session_id=visitor_id()), "deals", None
 
 
 @app.callback(Output("pitch-store", "data", allow_duplicate=True), Input({"type": "pitch-btn", "index": ALL}, "n_clicks"),
@@ -307,7 +314,7 @@ def make_pitch(clicks, h, session):
         return d["pitch"] | {"deal": i}
     if not config.portkey_key():
         return {"error": "Pitches for saved examples need an API key unless one was saved with the example.", "deal": i}
-    return pipeline.pitch(h["criteria"]["industry"], d, session or "anon") | {"deal": i}
+    return pipeline.pitch(h["criteria"]["industry"], d, visitor_id()) | {"deal": i}
 
 
 @app.callback(Output("main", "children"), Input("tabs", "value"), Input("hunt", "data"), Input("pitch-store", "data"))

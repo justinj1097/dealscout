@@ -28,9 +28,19 @@ class RateLimited(RuntimeError):
     pass
 
 
-def _rate_limit(session_id: str) -> None:
-    q = _recent_runs[session_id]
+_all_runs: deque = deque()
+
+
+def _rate_limit(visitor: str) -> None:
+    """Two limits: one visitor (IP address) gets RUNS_PER_10_MIN live searches per 10 minutes, and the
+    whole app gets RUNS_PER_HOUR_APP per hour, so a stranger on the public link can't run up the bill."""
     now = time.time()
+    while _all_runs and now - _all_runs[0] > 3600:
+        _all_runs.popleft()
+    if len(_all_runs) >= config.RUNS_PER_HOUR_APP:
+        raise RateLimited("DealScout is busy: the app-wide limit of live searches per hour is reached. "
+                          "Try a saved example, or come back in a few minutes.")
+    q = _recent_runs[visitor]
     while q and now - q[0] > 600:
         q.popleft()
     if len(q) >= config.RUNS_PER_10_MIN:
@@ -38,6 +48,7 @@ def _rate_limit(session_id: str) -> None:
         raise RateLimited(f"Slow down: {config.RUNS_PER_10_MIN} live searches per 10 minutes. Try again in about {wait} min, "
                           "or re-run a previous search (saved searches are free).")
     q.append(now)
+    _all_runs.append(now)
 
 
 def _cache_key(c: Criteria) -> str:

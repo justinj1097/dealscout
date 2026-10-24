@@ -4,3 +4,4 @@ openai==3.7.0
 pydantic==2.13.5
 requests==2.34.2
 pytest==9.1.1
+gunicorn==26.2.0   # only used by the online (Render) version

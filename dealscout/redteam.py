@@ -133,6 +133,8 @@ def run_all() -> list[Result]:
         except pipeline.RateLimited as e:
             blocked = (i + 1, str(e))
     pipeline._recent_runs.pop("redteam", None)
+    for _ in range(min(len(pipeline._all_runs), config.RUNS_PER_10_MIN)):
+        pipeline._all_runs.pop()
     out.append(Result(f"One user fires {config.RUNS_PER_10_MIN + 1} live searches in a row",
                       blocked is not None, f"search #{blocked[0]} refused: {blocked[1][:70]}…" if blocked else "not caught"))
     return out

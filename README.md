@@ -14,6 +14,9 @@ throw out deals with made-up links or numbers that don't match their own source.
 > **Model:** `gpt-6-luna` through the course Portkey key (no other model is used).
 > **Typical cost:** about $0.05–$0.10 per search, ≈ $0.001 per pitch; repeat searches are free for 24 h.
 
+> **Try it online:** _link added after deployment_ (free hosting: the first visit may take ~30 s to wake up).
+> **Or run it on your own computer** in about 5 minutes (below) — this is the fully supported path.
+
 ---
 
 ## Run it (about 5 minutes)
@@ -94,7 +97,8 @@ Plain Python (not AI) runs the hand-offs and all safety checks, so a prompt inje
 - A deal is dropped if its link never appeared in a real search result; a number is removed if the
   agent's own quoted sentence doesn't support it (currency-aware).
 - Caps: Scout ≤ 8 searches, Fact-Checker ≤ 6, ≤ 4 tool rounds per agent, $0.25 per run,
-  $5.00 per day for the whole app (`DEALSCOUT_DAILY_BUDGET`), 6 live searches per user per 10 minutes.
+  $5.00 per day for the whole app (`DEALSCOUT_DAILY_BUDGET`), 6 live searches per visitor (IP address)
+  per 10 minutes, and 40 live searches per hour for the whole app (`DEALSCOUT_RUNS_PER_HOUR`).
 - API keys are never sent to the model and are redacted from anything shown on screen.
 
 ---
@@ -113,6 +117,11 @@ and that the `.env` is found **one folder up**.
 python run_cli.py "Aerospace & Defense" --min 500 --months 12   # one search in the terminal
 python scripts/make_demos.py                                   # re-create the saved examples (~$0.25)
 ```
+
+## Online version (Render)
+`render.yaml` deploys the same code to Render's free tier: render.com → **New → Blueprint** → choose this
+repo → paste `PORTKEY_API_KEY` when asked → **Apply**. It runs with gunicorn, a $3/day budget, and 30 live
+searches per hour. Free instances sleep after ~15 minutes idle, so the first visit takes ~30 s.
 
 ## Data
 DealScout does not ship a large dataset: deals are found live. The small files in `data/` are

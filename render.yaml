@@ -1,0 +1,19 @@
+# One-click deploy on Render (render.com -> New -> Blueprint -> pick this repo).
+# Render asks you for PORTKEY_API_KEY during setup; it is stored as a secret, never in this repo.
+services:
+  - type: web
+    name: dealscout
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 300
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.3
+      - key: PORTKEY_API_KEY
+        sync: false
+      - key: DEALSCOUT_DAILY_BUDGET
+        value: "3.00"
+      - key: DEALSCOUT_RUNS_PER_HOUR
+        value: "30"
