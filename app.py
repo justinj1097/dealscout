@@ -98,7 +98,6 @@ app.layout = html.Div([
             ]),
             html.Div(id="status"),
             dcc.Loading(type="circle", color="#ff4fa3", children=html.Div(id="main", children=empty_state())),
-            dcc.Loading(type="dot", color="#ff4fa3", children=html.Div(id="pitch-area")),
         ]),
     ]),
     html.Div("DealScout · facts come only from sources found in each search · always confirm numbers before you quote them",
@@ -155,7 +154,7 @@ def deal_card(i, d):
     ])
 
 
-def deals_view(h):
+def deals_view(h, p=None):
     if h.get("error") and not h.get("deals"):
         return html.Div(h["error"], className="notice err")
     t = h.get("usage", {}).get("totals", {})
@@ -178,7 +177,12 @@ def deals_view(h):
                              "Numbers were checked when it was saved.", className="notice"))
     if h.get("theme"):
         head.append(html.Div([html.B("The big picture: "), h["theme"]], className="theme"))
-    return html.Div(head + [deal_card(i, d) for i, d in enumerate(h["deals"])])
+    cards = []
+    for i, d in enumerate(h["deals"]):
+        cards.append(deal_card(i, d))
+        if p and p.get("deal") == i:
+            cards.append(pitch_block(p, h))
+    return html.Div(head + cards)
 
 
 FLOW = ["Input guard", "Scout", "Gatekeeper", "Fact-Checker", "score_deals", "Analyst", "Pitch Coach"]
@@ -293,11 +297,7 @@ def run(go, demo, rt, industry, other, focus, mn, months, region, priority, num,
 
 
 @app.callback(Output("pitch-store", "data", allow_duplicate=True), Input({"type": "pitch-btn", "index": ALL}, "n_clicks"),
-              State("hunt", "data"), State("session", "data"), prevent_initial_call=True,
-              running=[(Output("status", "children"), html.Div(className="working", children=[
-                  html.Div(className="dot-pulse"),
-                  html.Div([html.B("Pitch Coach is writing your 60-second pitch (about 20 seconds)…"), html.Br(),
-                            "It will appear below the deal list."])]), None)])
+              State("hunt", "data"), State("session", "data"), prevent_initial_call=True)
 def make_pitch(clicks, h, session):
     if not ctx.triggered_id or not any(clicks) or not h:
         return no_update
@@ -325,15 +325,12 @@ def render(tab, h, p):
         return view
     if tab == "cost":
         return cost_view(h, (p or {}).get("usage"))
-    return deals_view(h)
+    return deals_view(h, p)
 
 
-@app.callback(Output("pitch-area", "children"), Input("pitch-store", "data"), State("hunt", "data"))
-def show_pitch(p, h):
-    if not p:
-        return None
+def pitch_block(p, h):
     if p.get("error") or not p.get("pitch"):
-        return html.Div(p.get("error", "No pitch."), className="notice err")
+        return html.Div(p.get("error", "No pitch."), className="notice err", id="pitch")
     x, d = p["pitch"], h["deals"][p["deal"]]
     return html.Div(className="pitch", id="pitch", children=[
         html.Div("YOUR 60-SECOND PITCH" + ("  ·  saved, $0.00" if p.get("cached") else
@@ -352,6 +349,23 @@ def show_pitch(p, h):
                   *([" · ", html.A("second source", href=d["second_source"], target="_blank")] if d.get("second_source") else [])],
                  className="sources", style={"marginTop": "10px"}),
     ])
+
+
+app.clientside_callback(
+    """function(clicks) {
+        const t = window.dash_clientside.callback_context.triggered_id;
+        return clicks.map((c, i) => (t && t.index === i && c) ? "Writing your pitch… about 20 seconds" : window.dash_clientside.no_update);
+    }""",
+    Output({"type": "pitch-btn", "index": ALL}, "children"),
+    Input({"type": "pitch-btn", "index": ALL}, "n_clicks"), prevent_initial_call=True)
+
+app.clientside_callback(
+    """function(p) {
+        if (p) { setTimeout(() => { const el = document.getElementById("pitch");
+                 if (el) el.scrollIntoView({behavior: "smooth", block: "start"}); }, 350); }
+        return window.dash_clientside.no_update;
+    }""",
+    Output("status", "title"), Input("pitch-store", "data"), prevent_initial_call=True)
 
 
 if __name__ == "__main__":

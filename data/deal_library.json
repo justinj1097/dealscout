@@ -658,5 +658,27 @@
   "deal_type": "Acquisition",
   "source_url": "https://investors.nvent.com/press-releases/press-release-details/2026/nVent-to-Acquire-Maverick-Power/default.aspx",
   "industry": "Power & Utilities"
+ },
+ {
+  "acquirer": "AAR CORP.",
+  "target": "MRO Holdings",
+  "announced_date": "2026-09-28",
+  "value_usd_m": 4000.0,
+  "ev_ebitda": 10.7,
+  "ev_revenue": null,
+  "deal_type": "Acquisition of controlling interest",
+  "source_url": "https://www.aarcorp.com/en/newsroom/press-releases/2026/aar-accelerates-its-aftermarket-platform-strategy-by-agreeing-to-acquire-a-controlling-interest-in-mro-holdings/",
+  "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "Lockheed Martin Corporation",
+  "target": "Ultra Maritime",
+  "announced_date": "2026-07-06",
+  "value_usd_m": 3450.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-acquire-ultra-maritime-solutions",
+  "industry": "Aerospace & Defense"
  }
 ]
