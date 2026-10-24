@@ -493,5 +493,170 @@
   "deal_type": "Acquisition",
   "source_url": "https://newsroom.viatris.com/2026-10-08-Viatris-Agrees-to-Acquire-Pacira-BioSciences%2C-Advancing-Its-Innovative-Medicines-Strategy-and-Becoming-a-Leader-in-Non-Opioid-Pain-Therapies",
   "industry": "Healthcare & Biotech"
+ },
+ {
+  "acquirer": "Rexel",
+  "target": "GCG",
+  "announced_date": "2026-09-25",
+  "value_usd_m": 1400.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.rexel.com/app/uploads/2026/09/PR-2026-09-Rexel-to-acquire-GCG.pdf",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "Ferguson Enterprises Inc.",
+  "target": "FWI Holdings, Inc. (FloWorks)",
+  "announced_date": "2026-07-13",
+  "value_usd_m": 1600.0,
+  "ev_ebitda": 10.0,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.corporate.ferguson.com/pressroom/news-releases/news-details/2026/Ferguson-to-Acquire-FloWorks-for-1-6-Billion-Increasing-its-Total-Addressable-Market-to-400-Billion-and-Expanding-its-Non-Residential-Value-Added-Capabilities/default.aspx",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "Brookfield",
+  "target": "Reliance Worldwide Corporation",
+  "announced_date": "2026-09-15",
+  "value_usd_m": 2800.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition / take-private",
+  "source_url": "https://bam.brookfield.com/press-releases/brookfield-agrees-acquire-reliance-worldwide-corporation",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "C.H. Robinson Worldwide, Inc.",
+  "target": "RXO Inc.",
+  "announced_date": "2026-10-05",
+  "value_usd_m": 5800.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-to-acquire-rxo/",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "WSP Global Inc.",
+  "target": "TRC Companies",
+  "announced_date": "2025-12-15",
+  "value_usd_m": 3300.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.wsp.com/en-us/news/2025/wsp-to-acquire-trc-supercharging-its-leading-position-in-the-power-energy-sector",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "CVC Capital Partners",
+  "target": "Smiths Detection",
+  "announced_date": "2025-12-03",
+  "value_usd_m": null,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Carve-out acquisition",
+  "source_url": "https://www.cvc.com/media/news/2025/cvc-announces-the-acquisition-of-smiths-detection-for-2bn/",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "CRH",
+  "target": "Arcosa, Inc.",
+  "announced_date": "2026-06-22",
+  "value_usd_m": 8500.0,
+  "ev_ebitda": 11.5,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.businesswire.com/news/home/20260622263461/en/CRH-to-Acquire-Arcosa-Leading-U.S.-Provider-of-Aggregates-and-Critical-Infrastructure-Products-for-%248.5B",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "Silgan Holdings Inc. and American Industrial Partners-affiliated funds",
+  "target": "Trivium Packaging B.V. (combined with Silgan\u2019s Metal Containers segment and Food and Beverage Flat Cap Closures business",
+  "announced_date": "2026-10-19",
+  "value_usd_m": 3400.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Combination / acquisition",
+  "source_url": "https://www.businesswire.com/news/home/20261018708447/en/Silgan-Announces-Strategic-Portfolio-Acceleration-Establishes-Partnership-to-Acquire-Trivium",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "Parker-Hannifin Corporation",
+  "target": "Filtration Group Corporation",
+  "announced_date": "2025-11-11",
+  "value_usd_m": 9250.0,
+  "ev_ebitda": 19.6,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.parker.com/news-events/press-releases/detail/496/parker-to-acquire-filtration-group-corporation",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "ESAB Corporation",
+  "target": "Eddyfi Technologies",
+  "announced_date": "2026-02-02",
+  "value_usd_m": 1450.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.esabcorporation.com/news/news-details/2026/ESAB-Corporation-to-Acquire-Eddyfi-Technologies-Creating-an-Unrivaled-Provider-of-Complete-Workflow-Solutions/default.aspx",
+  "industry": "Industrials"
+ },
+ {
+  "acquirer": "Vistra",
+  "target": "Cogentrix Energy",
+  "announced_date": "2026-01-05",
+  "value_usd_m": 4000.0,
+  "ev_ebitda": 7.25,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investor.vistracorp.com/2026-01-05-Vistra-Adds-to-its-Industry-Leading-Generation-Portfolio-with-Acquisition-of-Cogentrix",
+  "industry": "Power & Utilities"
+ },
+ {
+  "acquirer": "Vertiv",
+  "target": "Utility Innovation Holdings, Inc. (UtilityInnovation Group)",
+  "announced_date": "2026-09-02",
+  "value_usd_m": 1450.0,
+  "ev_ebitda": 13.0,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-announces-agreement-to-acquire-utilityinnovation-group-to-accelerate-time-to-power-for-ai-data-centers/",
+  "industry": "Power & Utilities"
+ },
+ {
+  "acquirer": "Consortium led by Global Infrastructure Partners and EQT",
+  "target": "The AES Corporation",
+  "announced_date": "2026-03-02",
+  "value_usd_m": 33400.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition / take-private",
+  "source_url": "https://www.aes.com/energy-insights/consortium-led-global-infrastructure-partners-and-eqt-agrees-acquire-aes",
+  "industry": "Power & Utilities"
+ },
+ {
+  "acquirer": "Flex",
+  "target": "EPC Power",
+  "announced_date": "2026-09-03",
+  "value_usd_m": 4400.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.flex.com/news/news-details/2026/Flex-to-Acquire-EPC-Power-Adding-Leading-Power-Conversion-Capabilities-for-AI-Data-Centers-and-Grid-Applications/default.aspx",
+  "industry": "Power & Utilities"
+ },
+ {
+  "acquirer": "nVent Electric",
+  "target": "Maverick Power",
+  "announced_date": "2026-08-24",
+  "value_usd_m": 1750.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://investors.nvent.com/press-releases/press-release-details/2026/nVent-to-Acquire-Maverick-Power/default.aspx",
+  "industry": "Power & Utilities"
  }
 ]

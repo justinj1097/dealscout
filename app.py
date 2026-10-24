@@ -96,6 +96,7 @@ app.layout = html.Div([
                 dcc.Tab(label="Cost", value="cost", className="tab", selected_className="tab--selected"),
                 dcc.Tab(label="Safety", value="safety", className="tab", selected_className="tab--selected"),
             ]),
+            html.Div(id="status"),
             dcc.Loading(type="circle", color="#ff4fa3", children=html.Div(id="main", children=empty_state())),
             dcc.Loading(type="dot", color="#ff4fa3", children=html.Div(id="pitch-area")),
         ]),
@@ -257,11 +258,21 @@ def make_session(s):
     return s or uuid.uuid4().hex
 
 
+RUNNING_NOTE = html.Div(className="working", children=[
+    html.Div(className="dot-pulse"),
+    html.Div([html.B("Your agents are working (about 40 seconds)"), html.Br(),
+              "Scout is searching the web and SEC filings → Gatekeeper checks links and numbers → "
+              "Fact-Checker confirms each deal with a second source → Analyst ranks them."])])
+
+
 @app.callback(Output("hunt", "data"), Output("tabs", "value"), Output("pitch-store", "data"),
               Input("go", "n_clicks"), Input("demo", "value"), Input("redteam-btn", "n_clicks"),
               State("industry", "value"), State("industry-other", "value"), State("focus", "value"), State("min", "value"),
               State("months", "value"), State("region", "value"), State("priority", "value"), State("num", "value"),
-              State("note", "value"), State("session", "data"), State("hunt", "data"), prevent_initial_call=True)
+              State("note", "value"), State("session", "data"), State("hunt", "data"), prevent_initial_call=True,
+              running=[(Output("go", "disabled"), True, not config.portkey_key()),
+                       (Output("go", "children"), "Agents at work… about 40 seconds", "Find deals"),
+                       (Output("status", "children"), RUNNING_NOTE, None)])
 def run(go, demo, rt, industry, other, focus, mn, months, region, priority, num, note, session, current):
     trig = ctx.triggered_id
     if trig == "redteam-btn":
@@ -282,7 +293,11 @@ def run(go, demo, rt, industry, other, focus, mn, months, region, priority, num,
 
 
 @app.callback(Output("pitch-store", "data", allow_duplicate=True), Input({"type": "pitch-btn", "index": ALL}, "n_clicks"),
-              State("hunt", "data"), State("session", "data"), prevent_initial_call=True)
+              State("hunt", "data"), State("session", "data"), prevent_initial_call=True,
+              running=[(Output("status", "children"), html.Div(className="working", children=[
+                  html.Div(className="dot-pulse"),
+                  html.Div([html.B("Pitch Coach is writing your 60-second pitch (about 20 seconds)…"), html.Br(),
+                            "It will appear below the deal list."])]), None)])
 def make_pitch(clicks, h, session):
     if not ctx.triggered_id or not any(clicks) or not h:
         return no_update

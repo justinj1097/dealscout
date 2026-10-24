@@ -94,7 +94,7 @@ Plain Python (not AI) runs the hand-offs and all safety checks, so a prompt inje
 - A deal is dropped if its link never appeared in a real search result; a number is removed if the
   agent's own quoted sentence doesn't support it (currency-aware).
 - Caps: Scout ≤ 8 searches, Fact-Checker ≤ 6, ≤ 4 tool rounds per agent, $0.25 per run,
-  $2.00 per day for the whole app (`DEALSCOUT_DAILY_BUDGET`), 6 live searches per user per 10 minutes.
+  $5.00 per day for the whole app (`DEALSCOUT_DAILY_BUDGET`), 6 live searches per user per 10 minutes.
 - API keys are never sent to the model and are redacted from anything shown on screen.
 
 ---

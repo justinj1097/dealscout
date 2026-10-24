@@ -122,3 +122,9 @@ table.t tr.total td { font-weight: 800; color: var(--pink2); }
 #note, .field textarea { background: var(--panel2) !important; color: var(--text) !important; border: 1px solid var(--line) !important; }
 #note:focus { border-color: var(--pink) !important; }
 #focus, #industry-other { background: var(--panel2) !important; color: var(--text) !important; }
+.btn:disabled { background: #3a2a33; color: var(--pink2); cursor: wait; }
+.working { display: flex; gap: 14px; align-items: center; background: var(--pinkdim); border: 1px solid var(--pink);
+  border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; line-height: 1.5; }
+.dot-pulse { width: 14px; height: 14px; border-radius: 50%; background: var(--pink); flex: none;
+  animation: pulse 1s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: .25; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
