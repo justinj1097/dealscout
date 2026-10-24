@@ -152,7 +152,11 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
     key = _cache_key(c)
     if use_cache and (hit := _cache_get(key)):
         hit.update({"cached": True, "run_id": run_id, "safety": [vars(e) for e in log.events] + hit.get("safety", [])})
-        hit["trace"] = trace + [{"agent": "Cache", "steps": [f"identical search from {hit.get('saved_time', '?')} reused – 0 tokens, $0.00"]}]
+        # keep the original run's trace and token table so the user can still see how the agents worked
+        hit["trace"] = trace + [{"agent": "Cache", "steps": [
+            f"identical search from {hit.get('saved_time', '?')} reused – 0 tokens, $0.00 this time",
+            "below: what the agents did when this search first ran"]}] + hit.get("trace", [])[1:]
+        hit["original_usage"] = hit.get("usage", {})
         hit["usage"] = {"by_agent": [], "totals": {"input_tokens": 0, "cached_tokens": 0, "cache_write_tokens": 0,
                         "output_tokens": 0, "reasoning_tokens": 0, "web_searches": 0, "cost": 0.0, "seconds": 0.0}}
         ledger.save({"cached": True, "industry": c.industry})

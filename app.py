@@ -50,7 +50,7 @@ def search_panel():
         field("Anything else? (optional)", dcc.Textarea(id="note", maxLength=400,
               placeholder="e.g. I'm interviewing at a defense-focused boutique next week")),
         html.Button("Find deals", id="go", className="btn", disabled=not has_key),
-        html.P("Takes about 40 seconds and costs about 9¢. Repeat searches are free for 24 h." if has_key else
+        html.P("Takes about 40 seconds and costs about 8¢. Repeat searches are free for 24 h." if has_key else
                "No API key found, so live search is off. Try a saved example below.", className="hint",
                style={"marginTop": "10px", "textAlign": "center"}),
         html.Div(className="divider"),
@@ -212,10 +212,56 @@ def cost_table(rows, total):
     return html.Table([head] + [r(x) for x in rows] + [r(total | {"agent": "Total"}, "total")], className="t")
 
 
+PRICE_NOTE = ("Prices: gpt-6-luna $0.10 per 1M input tokens, $0.01 per 1M cached input, $0.125 per 1M cache write, "
+              "$0.50 per 1M output; web search $0.01 per call. Measured from each API response's usage field.")
+
+
+def limits_note():
+    return (f"Limits: Scout ≤ {config.MAX_SEARCHES_SCOUT} searches, Fact-Checker ≤ {config.MAX_SEARCHES_CHECKER}, "
+            f"≤ {config.MAX_TOOL_ROUNDS} tool rounds per agent, {config.CALL_DEADLINE_S} s per model call, "
+            f"${config.RUN_COST_CAP:.2f} per run, ${config.DAILY_COST_CAP:.2f} per day for the whole app, "
+            f"{config.RUNS_PER_10_MIN} live searches per visitor per 10 min, {config.RUNS_PER_HOUR_APP} per hour app-wide.")
+
+
+def cost_intro():
+    rows = [("Live search (4 agents, ~7 web searches)", "≈ $0.08", "≈ 40 s"),
+            ("60-second pitch (Pitch Coach)", "≈ $0.001", "≈ 20 s"),
+            ("Same search again within 24 h", "$0.00", "instant"),
+            ("Saved example", "$0.00", "instant")]
+    return html.Div([
+        html.H3("What a search costs", style={"marginTop": 0}),
+        html.P("Run a search and this tab shows the real token counts and dollars for every agent in that run.", className="hint"),
+        html.Table([html.Tr([html.Th("What you do"), html.Th("Typical cost"), html.Th("Time")])] +
+                   [html.Tr([html.Td(a), html.Td(b), html.Td(c)]) for a, b, c in rows], className="t"),
+        html.P(PRICE_NOTE, className="hint", style={"marginTop": "14px"}),
+        html.P("About 90% of a search's cost is the web-search fee, not tokens, so DealScout saves money by reusing "
+               "searches and capping how many web searches each agent may run.", className="hint"),
+        html.P(limits_note(), className="hint")])
+
+
+def trace_intro():
+    roles = [("Input guard (code)", "Checks your form; blocks attempts to hijack the agents through the free-text box."),
+             ("Scout (AI)", "Searches the live web and SEC filings; returns candidate deals with an exact quote for each value."),
+             ("Gatekeeper (code)", "Drops deals whose link never appeared in a search, removes numbers their own quote doesn't support."),
+             ("Fact-Checker (AI)", "Confirms each deal with a different website and finds the advisor banks."),
+             ("score_deals (code)", "Ranks deals with a fixed formula: size, recency, banks, disclosed multiple, confirmation."),
+             ("Analyst (AI)", "Explains why each deal matters and how to use it in an interview."),
+             ("Pitch Coach (AI)", "When you click a deal: writes the 60-second pitch and likely interview questions.")]
+    return html.Div([trace_view({"trace": []}),
+                     html.H3("Who does what", style={"marginTop": "6px"}),
+                     *[html.Div([html.H4(a), html.Div(b, className="s")], className="trace-agent") for a, b in roles],
+                     html.P("Run a search to see every step each agent took: its web searches, tokens, and decisions.",
+                            className="hint")])
+
+
 def cost_view(h, pitch_usage):
     if h.get("cached"):
-        body = [html.Div("This search reused a saved result from the last 24 hours: 0 tokens, $0.00. "
-                         "Saved searches are the biggest cost saver in DealScout.", className="notice")]
+        ou = h.get("original_usage") or {}
+        body = [html.Div(f"This search reused a saved result from {h.get('saved_time', 'earlier')}: 0 tokens, $0.00 this time. "
+                         "Saved searches are the biggest cost saver in DealScout. Below is what the original search cost.",
+                         className="notice")]
+        if ou.get("by_agent"):
+            body.append(cost_table(ou["by_agent"], ou["totals"]))
     else:
         u = h.get("usage", {})
         body = [html.P("Measured from this run's API responses (usage field). Prices: gpt-6-luna $0.10 / 1M input, "
@@ -225,10 +271,7 @@ def cost_view(h, pitch_usage):
         body += [html.H4("Pitch Coach (last pitch)", style={"marginTop": "20px"}),
                  cost_table(pitch_usage.get("by_agent", []) or [], pitch_usage.get("totals", {}) | {"agent": "Total"})
                  if pitch_usage.get("by_agent") else html.Div("Reused a saved pitch: $0.00", className="notice")]
-    limits = (f"Limits: Scout ≤ {config.MAX_SEARCHES_SCOUT} searches, Fact-Checker ≤ {config.MAX_SEARCHES_CHECKER}, "
-              f"≤ {config.MAX_TOOL_ROUNDS} tool rounds per agent, ${config.RUN_COST_CAP:.2f} per run, "
-              f"${config.DAILY_COST_CAP:.2f} per day for the whole app, {config.RUNS_PER_10_MIN} live searches per 10 min per user.")
-    return html.Div(body + [html.P(limits, className="hint", style={"marginTop": "16px"})])
+    return html.Div(body + [html.P(limits_note(), className="hint", style={"marginTop": "16px"})])
 
 
 def safety_view(h, rt):
@@ -323,7 +366,7 @@ def render(tab, h, p):
     if tab == "safety":
         return safety_view(h if h and "criteria" in h else None, rt)
     if not h or "deals" not in h:
-        return empty_state()
+        return {"trace": trace_intro, "cost": cost_intro}.get(tab, empty_state)()
     if tab == "trace":
         view = trace_view(h)
         if p and p.get("steps"):
