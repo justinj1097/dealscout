@@ -114,8 +114,8 @@ def money(v):
 
 
 VERDICT_CLASS = {"confirmed": "ok", "partly confirmed": "mid", "could not confirm": "mid", "conflict": "bad"}
-VERDICT_TEXT = {"confirmed": "✓ Confirmed by 2nd source", "partly confirmed": "◐ Partly confirmed",
-                "could not confirm": "? Not independently confirmed", "conflict": "✗ Sources conflict"}
+VERDICT_TEXT = {"confirmed": "✓ Confirmed by 2nd source", "partly confirmed": "✓ Deal confirmed · some details unchecked",
+                "could not confirm": "✓ Value found on source page", "conflict": "✗ Sources conflict"}
 
 
 def deal_card(i, d):
@@ -126,6 +126,8 @@ def deal_card(i, d):
         banks += [html.Span("Seller:", className="chip side")] + [html.Span(b, className="chip") for b in d["seller_advisors"]]
     if not banks:
         banks = [html.Span("Advisors not found in sources", className="chip side")]
+    else:
+        banks.append(html.Span("· double-check banks before quoting", className="chip side"))
     mult = [f"{d['ev_ebitda']:.1f}x EV/EBITDA" if d.get("ev_ebitda") else None,
             f"{d['ev_revenue']:.1f}x EV/Revenue" if d.get("ev_revenue") else None]
     links = [html.A("Source", href=d["source_url"], target="_blank")]

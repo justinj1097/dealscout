@@ -193,6 +193,23 @@ def fetch_and_match(url: str, quote: str, timeout: int = 12) -> tuple[str, str]:
     return "not found on page", f"none of {', '.join(nums[:3])} appear in the page text"
 
 
+AMBIGUOUS_BANKS = {"morgan", "jp", "j.p.", "bank", "securities", "partners", "capital", "advisors", "llc"}
+
+
+def clean_bank_names(names: list[str]) -> list[str]:
+    """Drop advisor names that are too vague to quote in an interview (e.g. 'Morgan' could be Morgan Stanley
+    or J.P. Morgan) and remove duplicates."""
+    out, seen = [], set()
+    for n in names:
+        n = (n or "").strip().strip(",.;")
+        key = n.lower()
+        if len(n) < 3 or key in AMBIGUOUS_BANKS or key in seen:
+            continue
+        seen.add(key)
+        out.append(n)
+    return out
+
+
 # ------------------------------------------------------------------ 4. secrets
 def redact(text: str) -> str:
     out = _KEYLIKE.sub("[redacted]", text or "")

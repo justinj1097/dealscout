@@ -56,3 +56,16 @@ def test_env_file_found_one_folder_up(tmp_path):
     out = subprocess.run([sys.executable, "-c", "from dealscout import config; print(config.portkey_key())"],
                          cwd=repo, env=env, capture_output=True, text=True)
     assert out.stdout.strip() == "test-key-from-parent", out.stderr
+
+
+def test_only_proven_deals_are_shown():
+    from dealscout.pipeline import proof_of_reality
+    assert proof_of_reality({"verdict": "confirmed", "second_source": "https://b.example/x"})[0]
+    assert proof_of_reality({"verdict": "could not confirm", "second_source": "", "page_check": "matched"})[0]
+    assert not proof_of_reality({"verdict": "could not confirm", "second_source": "", "page_check": "site blocked bots"})[0]
+    assert not proof_of_reality({"verdict": "conflict", "second_source": "https://b.example/x", "page_check": "matched"})[0]
+    assert not proof_of_reality({"verdict": "partly confirmed", "second_source": "", "page_check": "not found on page"})[0]
+
+
+def test_vague_bank_names_dropped():
+    assert safety.clean_bank_names(["Morgan", "Citi", "Goldman Sachs", "Citi"]) == ["Citi", "Goldman Sachs"]

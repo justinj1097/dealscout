@@ -91,7 +91,7 @@ def gatekeeper(raw: list[dict], c: Criteria, scout_res, log: safety.SafetyLog) -
             d[f] = safety.clean_untrusted(str(d.get(f, "")), f, where, log, limit=400)
         for f in ("buyer_advisors", "seller_advisors"):
             d[f] = [safety.clean_untrusted(b, f, where, log, limit=80) for b in d.get(f, [])][:6]
-            d[f] = [b for b in d[f] if not b.startswith("[removed")]
+            d[f] = safety.clean_bank_names([b for b in d[f] if not b.startswith("[removed")])
         key = (d["acquirer"].lower()[:20], d["target"].lower()[:20])
         reason = None
         if "[removed" in d["acquirer"] + d["target"]:
@@ -119,6 +119,21 @@ def gatekeeper(raw: list[dict], c: Criteria, scout_res, log: safety.SafetyLog) -
         seen.add(key)
         kept.append(d)
     return kept, rejected
+
+
+def proof_of_reality(d: dict) -> tuple[bool, str]:
+    """Only real, proven deals reach the user. A deal is shown if (a) a DIFFERENT website found in a real
+    search confirms it, or (b) DealScout itself opened the deal's own source page and found its value
+    there. Deals with conflicting sources, or with no proof beyond the Scout's word, are hidden."""
+    if d.get("verdict") == "conflict":
+        return False, "sources disagree about this deal (value, parties, or status)"
+    if d.get("second_source") and d.get("verdict") in ("confirmed", "partly confirmed"):
+        return True, "confirmed by an independent second source"
+    if d.get("page_check") == "matched" and d.get("verdict") != "could not confirm":
+        return True, "value found on its own source page"
+    if d.get("page_check") == "matched":
+        return True, "value found on its own source page (no second source found)"
+    return False, "no independent second source, and its own source page could not be checked"
 
 
 def _page_checks(deals: list[dict], log: safety.SafetyLog) -> None:
@@ -199,8 +214,8 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
                 log.add("fake link blocked", f"{d['acquirer']} / {d['target']}", "Fact-Checker's second source was not a new search result; dropped")
             d["second_source"] = ind if good else ""
             if ck and good and not (d["buyer_advisors"] or d["seller_advisors"]):
-                d["buyer_advisors"] = [safety.clean_untrusted(b, "advisor", d["target"], log, 80) for b in ck.buyer_advisors_found][:5]
-                d["seller_advisors"] = [safety.clean_untrusted(b, "advisor", d["target"], log, 80) for b in ck.seller_advisors_found][:5]
+                d["buyer_advisors"] = [safety.clean_untrusted(b, "advisor", d["target"], log, 80) for b in safety.clean_bank_names(ck.buyer_advisors_found)][:5]
+                d["seller_advisors"] = [safety.clean_untrusted(b, "advisor", d["target"], log, 80) for b in safety.clean_bank_names(ck.seller_advisors_found)][:5]
                 if d["buyer_advisors"] or d["seller_advisors"]:
                     d["advisors_source"] = ind
             if d["verdict"] == "confirmed" and not good:
@@ -210,9 +225,22 @@ def hunt(c: Criteria, session_id: str = "local", use_cache: bool = True, progres
                 d["verdict"] = "conflict"
         trace.append({"agent": "Fact-Checker", "steps": fc.steps + [f"{d['target']}: {d['verdict']} – {d['check_note']}" for d in deals]})
 
-        deals = tools.score_deals(deals, c.priority, c.months_back)
-        deals = [d for d in deals if d["verdict"] != "conflict"] + [d for d in deals if d["verdict"] == "conflict"]
-        deals = deals[: c.num_deals]
+        shown, hidden = [], []
+        for d in deals:
+            ok, why = proof_of_reality(d)
+            (shown if ok else hidden).append(d)
+            if not ok:
+                out["rejected"].append({"deal": f"{d['acquirer']} / {d['target']}", "reason": why})
+                log.add("hidden: not proven real", f"{d['acquirer']} / {d['target']}", why)
+        trace.append({"agent": "Reality check (code)", "steps": [
+            f"shown {len(shown)}, hidden {len(hidden)} (a deal is shown only with a real second source "
+            "or its value found on its own source page)"] + [f"✗ {d['acquirer']} / {d['target']}" for d in hidden]})
+        deals = shown
+        if not deals:
+            out["error"] = ("No deal could be proven real by a second source this time, so none are shown. "
+                            "Please try again, widen the time window, or lower the minimum size.")
+            return _finish(out, ledger, log, t0)
+        deals = tools.score_deals(deals, c.priority, c.months_back)[: c.num_deals]
         trace.append({"agent": "score_deals tool (code)", "steps": [f"{d['score']:>5} – {d['acquirer']} / {d['target']}" for d in deals]})
 
         say("Analyst is writing why each deal matters…")
