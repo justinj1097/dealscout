@@ -128,3 +128,24 @@ table.t tr.total td { font-weight: 800; color: var(--pink2); }
 .dot-pulse { width: 14px; height: 14px; border-radius: 50%; background: var(--pink); flex: none;
   animation: pulse 1s ease-in-out infinite; }
 @keyframes pulse { 0%, 100% { opacity: .25; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.15); } }
+
+/* ---------- phones and small tablets: stack the form above the results ---------- */
+@media (max-width: 900px) {
+  .topbar { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .logo { font-size: 22px; }
+  .wrap { grid-template-columns: 1fr; padding: 14px 12px; gap: 16px; }
+  .card { padding: 14px; }
+  .card-top { flex-direction: column; gap: 4px; }
+  .value { text-align: left; font-size: 21px; }
+  .deal-title { font-size: 17px; }
+  .pitch { padding: 16px; }
+  .pitch-grid { grid-template-columns: 1fr; }
+  .summary .stat { min-width: 0; flex: 1 1 40%; }
+  .steps .step { width: 100%; }
+  .tab-bar .tab { padding: 8px 6px !important; font-size: 13px; }
+  table.t { font-size: 12px; }
+  table.t th, table.t td { padding: 6px 4px; }
+}
+
+html, body { overflow-x: hidden; }
+@media (max-width: 900px) { .tab-bar .tab { font-size: 12px; line-height: 1.2; } }

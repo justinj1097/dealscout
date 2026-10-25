@@ -680,5 +680,16 @@
   "deal_type": "Acquisition",
   "source_url": "https://investors.lockheedmartin.com/news-releases/news-release-details/lockheed-martin-acquire-ultra-maritime-solutions",
   "industry": "Aerospace & Defense"
+ },
+ {
+  "acquirer": "MDA Space",
+  "target": "Blue Canyon Technologies",
+  "announced_date": "2026-06-19",
+  "value_usd_m": 620.0,
+  "ev_ebitda": null,
+  "ev_revenue": null,
+  "deal_type": "Acquisition",
+  "source_url": "https://mda.space/article/mda-space-announces-definitive-agreement-to-acquire-us-based-blue-canyon-technologies-llc",
+  "industry": "Aerospace & Defense"
  }
 ]

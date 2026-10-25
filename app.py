@@ -91,7 +91,7 @@ app.layout = html.Div([
     html.Div(className="wrap", children=[
         search_panel(),
         html.Div([
-            dcc.Tabs(id="tabs", value="deals", className="tab-bar", children=[
+            dcc.Tabs(id="tabs", value="deals", className="tab-bar", mobile_breakpoint=0, children=[
                 dcc.Tab(label="Deals", value="deals", className="tab", selected_className="tab--selected"),
                 dcc.Tab(label="How the agents worked", value="trace", className="tab", selected_className="tab--selected"),
                 dcc.Tab(label="Cost", value="cost", className="tab", selected_className="tab--selected"),
