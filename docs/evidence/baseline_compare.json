@@ -1,0 +1,116 @@
+{
+ "A_memory_no_tools": {
+  "deals": [
+   {
+    "buyer": "Safran",
+    "target": "Collins Aerospace\u2019s actuation and flight control business",
+    "value_usd_m": 1800.0,
+    "announced": "2025-07-21",
+    "advisors": [],
+    "source_url": "https://www.safran-group.com/pressroom/safran-acquire-collins-aerospace-actuation-and-flight-control-business-2025-07-21"
+   },
+   {
+    "buyer": "Leonardo",
+    "target": "Iveco Defence Vehicles and ASTRA",
+    "value_usd_m": 1850.0,
+    "announced": "2025-03-18",
+    "advisors": [],
+    "source_url": "https://www.leonardo.com/en/press-release-detail/-/detail/18-03-2025-leonardo-to-acquire-iveco-defence-vehicles-and-idas-from-iveco-group"
+   },
+   {
+    "buyer": "Redwire",
+    "target": "Edge Autonomy",
+    "value_usd_m": 925.0,
+    "announced": "2025-01-13",
+    "advisors": [],
+    "source_url": "https://redwirespace.com/newsroom/redwire-to-acquire-edge-autonomy/"
+   },
+   {
+    "buyer": "TJC",
+    "target": "L3Harris Commercial Aviation Solutions",
+    "value_usd_m": 800.0,
+    "announced": "2025-01-30",
+    "advisors": [],
+    "source_url": "https://www.l3harris.com/newsroom/press-release/2025/01/l3harris-sell-commercial-aviation-solutions-business-tjc"
+   },
+   {
+    "buyer": "Honeywell",
+    "target": "CAES Systems",
+    "value_usd_m": 1900.0,
+    "announced": "2024-06-20",
+    "advisors": [],
+    "source_url": "https://www.honeywell.com/us/en/press/2024/06/honeywell-to-acquire-caes-systems"
+   }
+  ],
+  "seconds": 14.5,
+  "tokens_in": 223,
+  "tokens_out": 1619,
+  "searches": 0,
+  "cost": 0.0008
+ },
+ "B_web_search_no_checks": {
+  "deals": [
+   {
+    "buyer": "GE Aerospace",
+    "target": "Consolidated Precision Products (CPP)",
+    "value_usd_m": 11750.0,
+    "announced": "2026-09-08",
+    "advisors": [
+     "Buyer: not disclosed",
+     "Seller: not disclosed"
+    ],
+    "source_url": "https://www.geaerospace.com/news/press-releases/ge-aerospace-acquire-consolidated-precision-products-cpp-expanding-mission-critical"
+   },
+   {
+    "buyer": "AAR Corp.",
+    "target": "MRO Holdings (65% controlling interest)",
+    "value_usd_m": 4000.0,
+    "announced": "2026-09-28",
+    "advisors": [
+     "Buyer: Goldman Sachs & Co. LLC; William Blair & Company, LLC; Centerview Partners LLC",
+     "Seller: Solomon Partners; RBC Capital Markets"
+    ],
+    "source_url": "https://www.aarcorp.com/en/newsroom/press-releases/2026/aar-accelerates-its-aftermarket-platform-strategy-by-agreeing-to-acquire-a-controlling-interest-in-mro-holdings/"
+   },
+   {
+    "buyer": "CACI International",
+    "target": "ARKA Group",
+    "value_usd_m": 2600.0,
+    "announced": "2025-12-22",
+    "advisors": [
+     "Buyer: Wells Fargo",
+     "Seller: J.P. Morgan Securities LLC; Evercore"
+    ],
+    "source_url": "https://investor.caci.com/2025-12-22-CACI-Enters-Into-Definitive-Agreement-to-Acquire-ARKA-Group%2C-Expanding-Its-Technology-Focus-In-Space-Based-Sensing-and-Actionable-Intelligence"
+   },
+   {
+    "buyer": "TransDigm Group",
+    "target": "Jet Parts Engineering and Victor Sierra Aviation Holdings",
+    "value_usd_m": 2200.0,
+    "announced": "2026-01-16",
+    "advisors": [
+     "Buyer: not disclosed",
+     "Seller: Harris Williams"
+    ],
+    "source_url": "https://transdigmgroupinc.gcs-web.com/news-releases/news-release-details/transdigm-announces-acquisition-jet-parts-engineering-and-victor"
+   },
+   {
+    "buyer": "Howmet Aerospace",
+    "target": "Consolidated Aerospace Manufacturing (CAM)",
+    "value_usd_m": 1800.0,
+    "announced": "2025-12-22",
+    "advisors": [
+     "Buyer: not disclosed",
+     "Seller: not disclosed"
+    ],
+    "source_url": "https://www.howmet.com/financial-release/2025-12-22/howmet-aerospace-to-acquire-consolidated-aerospace-manufacturing-from-stanley-black-decker-for-approximately-1-8-billion/"
+   }
+  ],
+  "seconds": 41.5,
+  "tokens_in": 46632,
+  "tokens_out": 1413,
+  "searches": 5,
+  "cost": 0.0555
+ },
+ "question": "Today is October 25, 2026. List the 5 most notable Aerospace & Defense M&A deals announced in the last 12 months worth at least $500 million. For each give buyer, target, deal value in $ millions, announcement date, the banks that advised each side, and a source URL."
+}

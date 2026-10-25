@@ -1,0 +1,35 @@
+{
+ "full_runs": 24,
+ "by_agent": {
+  "Scout": {
+   "input_tokens": 41011.83333,
+   "cached_tokens": 10606.375,
+   "cache_write_tokens": 3860.41667,
+   "output_tokens": 1664.04167,
+   "reasoning_tokens": 437.20833,
+   "web_searches": 4.29167,
+   "cost": 0.04699,
+   "seconds": 19.78333
+  },
+  "Fact-Checker": {
+   "input_tokens": 22471.33333,
+   "cached_tokens": 4331.25,
+   "cache_write_tokens": 1127.20833,
+   "output_tokens": 898.95833,
+   "reasoning_tokens": 347.66667,
+   "web_searches": 2.79167,
+   "cost": 0.03025,
+   "seconds": 61.175
+  },
+  "Analyst": {
+   "input_tokens": 1345.25,
+   "cached_tokens": 0,
+   "cache_write_tokens": 1303.5,
+   "output_tokens": 443.375,
+   "reasoning_tokens": 46.70833,
+   "web_searches": 0,
+   "cost": 0.00039,
+   "seconds": 3.85833
+  }
+ }
+}
