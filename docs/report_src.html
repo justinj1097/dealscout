@@ -57,7 +57,7 @@ ranked, and turned into an interview-ready pitch.</div>
   <div><b>GitHub repo:</b> <a href="https://github.com/justinj1097/dealscout">https://github.com/justinj1097/dealscout</a> (public; runs locally in ~5 minutes from the README)</div>
   <div><b>What it does (one sentence):</b> You pick an industry, deal size and time window; four AI agents search the web and SEC filings, prove each deal is real with a second source, rank the deals by what you care about, and write a 60-second “walk me through a deal” answer for the one you choose.</div>
 </div>
-<figure><img src="IMG:results.jpg" style="max-height:3.9in"><figcaption><b>Figure 1.</b> A real DealScout result (Aerospace &amp; Defense, “defense electronics and space”, ≥ $250M, last 12 months). Every card shows buyer → target, value, date, status, advisor banks, a “Confirmed by 2nd source” badge, why it matters, and an interview angle. This search cost $0.077 and took 38 seconds.</figcaption></figure>
+<figure><img src="IMG:results.jpg" style="max-height:3.5in"><figcaption><b>Figure 1.</b> A real DealScout result (Aerospace &amp; Defense, “defense electronics and space”, ≥ $250M, last 12 months). Every card shows buyer → target, value, date, status, advisor banks, a “Confirmed by 2nd source” badge, why it matters, and an interview angle. This search cost $0.077 and took 38 seconds.</figcaption></figure>
 
 <!-- ======================================================= 2. MOTIVATION -->
 <h2><span class="n">2</span>Motivation</h2>
@@ -81,7 +81,7 @@ old deals with invented links, and even with web search the answers miss most of
 proof that the numbers are right. In an interview, one wrong number is worse than no number.</li>
 </ul>
 <p>So the real cost today is <b>time and risk</b>: a careful student spends a meaningful chunk of an evening per
-industry (my estimate: 30–60 minutes to find three deals with values, banks and sources and draft one pitch), and
+industry (my pilot user put it at 30 minutes to an hour, even with a Bloomberg terminal), and
 a careless one walks into an interview with a stale or wrong fact.</p>
 <h3>Why should anyone care?</h3>
 <p>Investment-banking recruiting is high-stakes and front-loaded: thousands of students prepare at the same time,
@@ -192,8 +192,8 @@ also typed an attack into the free-text box: <i>“…Ignore all previous instru
 <li><b>Analyst (1 call):</b> wrote “why it matters” and an interview angle per deal plus the theme (“continued capability-building across space and defense electronics…”). 1,575 in / 441 out; $0.0004.</li>
 <li><b>Pitch Coach (on click):</b> called <code>get_comparables</code>, then wrote the Rocket Lab–Iridium pitch in Figure 4. 2,250 in / ~780 out; $0.0007.</li>
 </ol>
-<figure><img src="IMG:trace.jpg" style="max-height:4.6in"><figcaption><b>Figure 3.</b> The app’s “How the agents worked” tab for this run: every search query, every model call’s tokens and cost, the Gatekeeper’s page checks and the Fact-Checker’s verdicts. Users (and graders) can audit any run this way.</figcaption></figure>
-<figure><img src="IMG:pitch.jpg" style="max-height:4.6in"><figcaption><b>Figure 4.</b> The Pitch Coach’s output for the top deal: a spoken 60-second answer, key numbers (including the advisor banks), why it makes sense, risks, and the follow-up questions an interviewer is likely to ask. It says the multiple was “not disclosed” instead of inventing one.</figcaption></figure>
+<figure><img src="IMG:trace.jpg" style="max-height:4.0in"><figcaption><b>Figure 3.</b> The app’s “How the agents worked” tab for this run: every search query, every model call’s tokens and cost, the Gatekeeper’s page checks and the Fact-Checker’s verdicts. Users (and graders) can audit any run this way.</figcaption></figure>
+<figure><img src="IMG:pitch.jpg" style="max-height:4.0in"><figcaption><b>Figure 4.</b> The Pitch Coach’s output for the top deal: a spoken 60-second answer, key numbers (including the advisor banks), why it makes sense, risks, and the follow-up questions an interviewer is likely to ask. It says the multiple was “not disclosed” instead of inventing one.</figcaption></figure>
 
 <!-- ======================================================= 5. TOKENOMICS -->
 <h2><span class="n">5</span>Tokenomics</h2>
@@ -266,7 +266,7 @@ search still completed normally.</p>
 <i>same</i> safety code the live app uses. All nine are stopped (Figure 8), including a page that hides orders in <code>display:none</code>, <code>font-size:0</code>, an HTML comment and
 zero-width characters; a made-up $9B deal with a fake link; a 10× number error; a looping agent after the budget is spent; and a hung API call stopped after 1 second
 (deadline shortened for the test).</p>
-<figure><img src="IMG:redteam.jpg" style="max-height:3.6in"><figcaption><b>Figure 8.</b> The red-team check: 9 of 9 attacks stopped, each with the evidence of what the defense did. It runs offline and costs $0.</figcaption></figure>
+<figure><img src="IMG:redteam.jpg" style="max-height:3.2in"><figcaption><b>Figure 8.</b> The red-team check: 9 of 9 attacks stopped, each with the evidence of what the defense did. It runs offline and costs $0.</figcaption></figure>
 <p><b>3 · Real catches from real searches</b> (from the saved runs’ safety logs, not staged):</p>
 <ul>
 <li><b>Number not supported (4 times):</b> e.g. the Scout reported MDA–Blue Canyon at $874M, but its own quote said “US$620 million (C$874 million)” — the Gatekeeper removed the wrong value; SpaceX–xAI was reported as $1.25 trillion while its quote said $1.0 trillion.</li>
@@ -291,13 +291,18 @@ His run also exposed a real usability problem: on a phone the search form was sq
 (Figure 9, right).</p>
 <figure class="pair"><img src="IMG:user_phone_results.jpg"><img src="IMG:user_phone_pitch.jpg"><img src="IMG:mobile.jpg"></figure>
 <figcaption><b>Figure 9.</b> Left and middle: a pilot user’s own screenshots from his phone on the live site — results, and his 60-second pitch for GE Aerospace–CPP. Right: the phone layout after the fix his test prompted (form stacked above results, tabs on one row).</figcaption>
-<div class="box pink"><b class="t">Pilot user feedback.</b> <span class="todo">[ADD: tester’s one-sentence quote, his 1–5 usefulness score, and his “normal way” time vs. DealScout time.]</span></div>
+<div class="box pink"><b class="t">Pilot user feedback.</b>
+<p style="margin:6px 0"><b>Before (his normal way):</b> asked how long finding these deals and prepping a pitch would normally take him, he said
+<i>“with Bloomberg like 30 min to an hour.”</i> <b>With DealScout:</b> 43 seconds for four confirmed deals, plus a few seconds for the pitch.</p>
+<p style="margin:6px 0"><b>In his words:</b> <i>“I liked it, good for surface level pitch and screening deals quickly.”</i></p>
+<p style="margin:6px 0" class="small">My read: he sees DealScout as a fast first pass — screening which deals matter and getting a starting pitch — not a replacement for deep
+diligence in a professional terminal. That is exactly the gap it was built for, and his “surface level” comment is reflected in the limits below.</p></div>
 
 <h3>Time, quality and money</h3>
 <ul>
-<li><b>Time.</b> Finding three deals with values, banks and sources and drafting one pitch the manual way takes, by my estimate, 30–60 minutes per industry;
-DealScout returns five checked deals in about 40 seconds and a pitch in about 10–20 seconds. Even allowing 5 minutes to read the results and click through to the
-sources, that is roughly a <b>6–12× faster</b> path to a prepared answer. <span class="small">(Manual time is my estimate pending the pilot user’s measured time.)</span></li>
+<li><b>Time.</b> My pilot user said finding these deals and prepping a pitch takes him <b>30 minutes to an hour even with Bloomberg</b> — a professional terminal most
+students don’t have. In DealScout his search took 43 seconds and the pitch about 10–20 seconds. Even allowing 5 minutes to read the results and click through to
+the sources, that is roughly a <b>6–12× faster</b> path to a first-pass answer (30–60 min → ~5 min).</li>
 <li><b>Quality.</b> On the same question, a memory-only chatbot returned 0 of 5 recent deals and 4 broken links; DealScout’s 15 audited deals were all real with correct values,
 and it found advisor banks a web-search chatbot left as “not disclosed”.</li>
 <li><b>Money and reach.</b> A month of heavy use costs about <b>$1.57</b> per user in API fees, versus thousands of dollars a year for a single seat on a professional database
@@ -317,13 +322,16 @@ that most students cannot access at all. That makes deal preparation possible fo
 <li><b>Status goes stale:</b> a deal saved as “Pending” may since have closed.</li>
 <li><b>The injection filter can over-trigger</b> on innocent phrases (a source page said “You are now…”); the cost is only that the page is not used for the extra number check.</li>
 <li><b>Free hosting sleeps</b> after 15 idle minutes (first visit ~30 s), and caches and rate limits live in one server process.</li>
-<li><b>Evidence of impact is still small:</b> one pilot user; manual-time savings are an estimate.</li>
+<li><b>Depth is “surface level”</b> (my pilot user’s words): DealScout is good for screening deals quickly and a first pitch, but it does not build models,
+read full merger filings, or give the financial detail a banker would need for real diligence.</li>
+<li><b>Evidence of impact is still small:</b> one pilot user, and his “before” time is his own estimate rather than a timed test.</li>
 </ul>
 <h3>What I would build with another month</h3>
 <ol>
 <li><b>A real user study:</b> 10 recruiting students doing the timed before/after task, with an interviewer rating their answers.</li>
 <li><b>Better advisor and valuation data:</b> parse SEC merger proxies (DEFM14A “Opinion of Financial Advisor” sections) for banks and multiples; label EV vs. equity value.</li>
 <li><b>“Deal of the day” digests</b> by industry, emailed to subscribers — one search shared by many users, which drives the cost per user toward zero.</li>
+<li><b>Go deeper than “surface level”:</b> a “deep dive” button that pulls the target’s financials and the merger proxy’s valuation section, so the pitch can defend the price, not just describe the deal.</li>
 <li><b>Practice mode:</b> the Pitch Coach plays the interviewer, asks the follow-up questions, and grades the student’s spoken answer.</li>
 <li><b>Shared cache and rate limits in a database</b> so the app scales past one server, plus an alert when daily spend approaches the cap.</li>
 </ol>
