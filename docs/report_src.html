@@ -295,8 +295,11 @@ His run also exposed a real usability problem: on a phone the search form was sq
 <p style="margin:6px 0"><b>Before (his normal way):</b> asked how long finding these deals and prepping a pitch would normally take him, he said
 <i>“with Bloomberg like 30 min to an hour.”</i> <b>With DealScout:</b> 43 seconds for four confirmed deals, plus a few seconds for the pitch.</p>
 <p style="margin:6px 0"><b>In his words:</b> <i>“I liked it, good for surface level pitch and screening deals quickly.”</i></p>
-<p style="margin:6px 0" class="small">My read: he sees DealScout as a fast first pass — screening which deals matter and getting a starting pitch — not a replacement for deep
-diligence in a professional terminal. That is exactly the gap it was built for, and his “surface level” comment is reflected in the limits below.</p></div>
+<p style="margin:6px 0"><b>Usefulness score: 3 / 5</b> (1 = not useful, would stick with his normal way · 3 = saves some time but would redo a lot · 5 = would use it as his main way to prep).
+His reason: <i>“Need more in depth info to anticipate follow ups.”</i></p>
+<p style="margin:6px 0" class="small">My read: he values DealScout as a fast first pass — screening which deals matter and getting a starting pitch — but a 3/5 says it is
+not yet enough on its own. The specific gap is depth: the follow-up questions an interviewer asks (“how was it valued?”, “what were the financials?”) need detail that free
+public sources often don’t give, and the pitch often has to say “not disclosed”. This is the main thing I would fix next (Section 8).</p></div>
 
 <h3>Time, quality and money</h3>
 <ul>
@@ -322,16 +325,17 @@ that most students cannot access at all. That makes deal preparation possible fo
 <li><b>Status goes stale:</b> a deal saved as “Pending” may since have closed.</li>
 <li><b>The injection filter can over-trigger</b> on innocent phrases (a source page said “You are now…”); the cost is only that the page is not used for the extra number check.</li>
 <li><b>Free hosting sleeps</b> after 15 idle minutes (first visit ~30 s), and caches and rate limits live in one server process.</li>
-<li><b>Depth is “surface level”</b> (my pilot user’s words): DealScout is good for screening deals quickly and a first pitch, but it does not build models,
-read full merger filings, or give the financial detail a banker would need for real diligence.</li>
+<li><b>Depth is “surface level”</b> (my pilot user’s words, and the reason he scored it <b>3 / 5</b>: “need more in depth info to anticipate follow ups”). DealScout is good
+for screening deals quickly and a first pitch, but it does not yet give the target’s financials, valuation detail or deal terms needed to handle tougher follow-up questions.</li>
 <li><b>Evidence of impact is still small:</b> one pilot user, and his “before” time is his own estimate rather than a timed test.</li>
 </ul>
 <h3>What I would build with another month</h3>
 <ol>
-<li><b>A real user study:</b> 10 recruiting students doing the timed before/after task, with an interviewer rating their answers.</li>
+<li><b>A larger user study:</b> 10 recruiting students doing the timed before/after task, with an interviewer rating their answers.</li>
 <li><b>Better advisor and valuation data:</b> parse SEC merger proxies (DEFM14A “Opinion of Financial Advisor” sections) for banks and multiples; label EV vs. equity value.</li>
 <li><b>“Deal of the day” digests</b> by industry, emailed to subscribers — one search shared by many users, which drives the cost per user toward zero.</li>
-<li><b>Go deeper than “surface level”:</b> a “deep dive” button that pulls the target’s financials and the merger proxy’s valuation section, so the pitch can defend the price, not just describe the deal.</li>
+<li><b>Go deeper than “surface level” (top priority, from user feedback):</b> a “deep dive” button that pulls the target’s revenue and EBITDA, the merger proxy’s valuation section
+(the banks’ fairness-opinion multiples), premium paid and financing, so the Pitch Coach can prepare answers to harder follow-ups — then re-test with the same user to see if the score moves above 3.</li>
 <li><b>Practice mode:</b> the Pitch Coach plays the interviewer, asks the follow-up questions, and grades the student’s spoken answer.</li>
 <li><b>Shared cache and rate limits in a database</b> so the app scales past one server, plus an alert when daily spend approaches the cap.</li>
 </ol>
