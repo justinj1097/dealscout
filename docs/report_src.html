@@ -54,7 +54,8 @@ ranked, and turned into an interview-ready pitch.</div>
 <div class="meta">
   <div><b>Author:</b> Justin Jian · MGT 409 AI Foundations · Final Project · October 2026</div>
   <div><b>Live app:</b> <a href="https://dealscout-r8xm.onrender.com">https://dealscout-r8xm.onrender.com</a> (free hosting; first visit may take ~30 s to wake up)</div>
-  <div><b>GitHub repo:</b> <a href="https://github.com/justinj1097/dealscout">https://github.com/justinj1097/dealscout</a> (public; runs locally in ~5 minutes from the README)</div>
+  <div><b>GitHub repo (public — no access needed):</b> <a href="https://github.com/justinj1097/dealscout">https://github.com/justinj1097/dealscout</a></div>
+  <div><b>Clone it:</b> <code>git clone https://github.com/justinj1097/dealscout.git</code> — then follow the README (runs locally in ~5 minutes; reads <code>PORTKEY_API_KEY</code> from a <code>.env</code> in the repo or the folder above it).</div>
   <div><b>What it does (one sentence):</b> You pick an industry, deal size and time window; four AI agents search the web and SEC filings, prove each deal is real with a second source, rank the deals by what you care about, and write a 60-second “walk me through a deal” answer for the one you choose.</div>
 </div>
 <figure><img src="IMG:results.jpg" style="max-height:3.5in"><figcaption><b>Figure 1.</b> A real DealScout result (Aerospace &amp; Defense, “defense electronics and space”, ≥ $250M, last 12 months). Every card shows buyer → target, value, date, status, advisor banks, a “Confirmed by 2nd source” badge, why it matters, and an interview angle. This search cost $0.077 and took 38 seconds.</figcaption></figure>
@@ -339,5 +340,6 @@ for screening deals quickly and a first pitch, but it does not yet give the targ
 <li><b>Practice mode:</b> the Pitch Coach plays the interviewer, asks the follow-up questions, and grades the student’s spoken answer.</li>
 <li><b>Shared cache and rate limits in a database</b> so the app scales past one server, plus an alert when daily spend approaches the cap.</li>
 </ol>
+<p><b>Code:</b> <a href="https://github.com/justinj1097/dealscout">https://github.com/justinj1097/dealscout</a> (public) · <b>Live app:</b> <a href="https://dealscout-r8xm.onrender.com">https://dealscout-r8xm.onrender.com</a></p>
 <p class="small">Educational project. Deal information comes from public sources and may be incomplete or out of date; DealScout tells users to confirm numbers with the linked sources before quoting them.</p>
 </body></html>
